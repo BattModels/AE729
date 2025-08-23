@@ -107,47 +107,48 @@ The electrification of mobility (automotive and aviation) requires large-scale e
       <td>Oct 8, 2025</td>
       <td>Mid-term</td>
     </tr>
+    <!-- UPDATED FROM HERE ONWARD -->
     <tr>
       <td>08</td>
       <td>Oct 13, 2025</td>
-      <td>4.1 Electrode–Electrolyte Interfaces</td>
+      <td>No Class</td>
       <td>Oct 15, 2025</td>
-      <td>4.2 Electrode–Electrolyte Interfaces</td>
+      <td>4.1 Electrode–Electrolyte Interfaces</td>
     </tr>
     <tr>
       <td>09</td>
       <td>Oct 20, 2025</td>
-      <td>4.3 Polymer Electrolytes and Ionic Liquids</td>
+      <td>4.2 Electrode–Electrolyte Interfaces</td>
       <td>Oct 22, 2025</td>
-      <td>5.1 Transport in Solids</td>
+      <td>4.3 Polymer Electrolytes and Ionic Liquids</td>
     </tr>
     <tr>
       <td>10</td>
       <td>Oct 27, 2025</td>
-      <td>5.2 Transport in Liquids</td>
+      <td>5.1 Transport in Solids</td>
       <td>Oct 29, 2025</td>
-      <td>5.3 Porous Media</td>
+      <td>5.2 Transport in Liquids</td>
     </tr>
     <tr>
       <td>11</td>
       <td>Nov 3, 2025</td>
-      <td>6.1 Porous Electrode Theory</td>
+      <td>5.3 Porous Media</td>
       <td>Nov 5, 2025</td>
-      <td>6.2 Modified Porous Electrode Theory</td>
+      <td>6.1 Porous Electrode Theory</td>
     </tr>
     <tr>
       <td>12</td>
       <td>Nov 10, 2025</td>
-      <td>7.1 Battery Cell Modeling</td>
+      <td>6.2 Modified Porous Electrode Theory</td>
       <td>Nov 12, 2025</td>
-      <td>7.2 Battery Pack Modeling</td>
+      <td>7.1 Battery Cell Modeling</td>
     </tr>
     <tr>
       <td>13</td>
       <td>Nov 17, 2025</td>
-      <td>Battery Modeling PyBaMM (demo)</td>
+      <td>7.2 Battery Pack Modeling</td>
       <td>Nov 19, 2025</td>
-      <td>PyBaMM (demo)</td>
+      <td>Battery Modeling - PyBaMM (demo)</td>
     </tr>
     <tr>
       <td>14</td>
@@ -165,7 +166,6 @@ The electrification of mobility (automotive and aviation) requires large-scale e
     </tr>
   </tbody>
 </table>
-
 
 <!-- ```{tableofcontents} -->
 <!-- ``` -->
