@@ -2,6 +2,9 @@
 
 This site contains the code examples used in the AEROSP 729-004 / MATSCIE 593-001 / MECHENG 699-001 course taught at the University of Michigan by [Prof. Venkat Viswanathan](https://eeg.engin.umich.edu/).
 
+## Time and Location
+
+Monday - Wednesday, 9:00 - 10:30 AM, FXB 1024
 ## About the course
 
 The electrification of mobility (automotive and aviation) requires large-scale electrochemical energy storage systems.  Batteries play a prominent role in sustainable transportation, aviation, and portable electronics.  This course introduces the principles and mathematical models of electrochemical energy storage with a specific focus on Li-ion batteries. Students will study thermodynamics and reaction kinetics pertaining to electrochemical reactions, and phase transformations relating to batteries. This course will ensure a detailed understanding of the porous electrode modeling of Li-ion batteries and how they can be used in systems (modules, packs) for electric mobility.
