@@ -2,167 +2,235 @@
 
 This site contains the code examples used in the AEROSP 729-004 / MATSCIE 593-001 / MECHENG 699-001 course taught at the University of Michigan by [Prof. Venkat Viswanathan](https://eeg.engin.umich.edu/).
 
+## Time and Location
+
+Monday - Wednesday, 9:00 - 10:30 AM, FXB 1024
 ## About the course
 
 The electrification of mobility (automotive and aviation) requires large-scale electrochemical energy storage systems.  Batteries play a prominent role in sustainable transportation, aviation, and portable electronics.  This course introduces the principles and mathematical models of electrochemical energy storage with a specific focus on Li-ion batteries. Students will study thermodynamics and reaction kinetics pertaining to electrochemical reactions, and phase transformations relating to batteries. This course will ensure a detailed understanding of the porous electrode modeling of Li-ion batteries and how they can be used in systems (modules, packs) for electric mobility.
 
 ## Schedule
 <style>
-/* Self-contained styles for this page only */
-.schedule-table {
+/* Base table */
+table.schedule-mtwf {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
 }
-.schedule-table, .schedule-table th, .schedule-table td {
+table.schedule-mtwf, table.schedule-mtwf th, table.schedule-mtwf td {
   border: 1px solid #ccc;
 }
-.schedule-table th, .schedule-table td {
+table.schedule-mtwf th, table.schedule-mtwf td {
   padding: 8px;
   text-align: left;
+  vertical-align: top;
 }
 
-/* Light mode header: extremely light gray */
-.schedule-table thead tr {
-  background: #f2f2f0;   /* almost white */
-  color: #000;           /* black text */
+/* Header & striping – LIGHT (theme toggle) */
+html[data-theme="light"] table.schedule-mtwf thead tr,
+body[data-theme="light"] table.schedule-mtwf thead tr {
+  background: #f2f2f2;  /* extremely light gray */
+  color: #000;
+}
+html[data-theme="light"] table.schedule-mtwf tbody tr:nth-child(even),
+body[data-theme="light"] table.schedule-mtwf tbody tr:nth-child(even) {
+  background: #fafafa;
 }
 
-<!-- /* Row striping */ -->
-<!-- .schedule-table tbody tr:nth-child(even) { -->
-<!--   background: #fafafa;   /* super light gray for even rows */ -->
-<!-- } -->
+/* Header & striping – DARK (theme toggle) */
+html[data-theme="dark"] table.schedule-mtwf thead tr,
+body[data-theme="dark"] table.schedule-mtwf thead tr {
+  background: #444;
+  color: #fff;
+}
+html[data-theme="dark"] table.schedule-mtwf tbody tr:nth-child(even),
+body[data-theme="dark"] table.schedule-mtwf tbody tr:nth-child(even) {
+  background: #2a2a2a;
+}
 
-<!-- /* Dark mode tweaks */ -->
-<!-- @media (prefers-color-scheme: dark) { -->
-<!--   .schedule-table, .schedule-table th, .schedule-table td { border-color: #555; } -->
-<!--   .schedule-table tbody tr:nth-child(even) { background: #2a2a2a; } -->
-<!--   .schedule-table thead tr { background: #444; color: #fff; } -->
+/* Colored cells for events */
+.cell-class    { font-weight: 500; }
+.cell-holiday  { font-weight: 600; }
+.cell-exam     { font-weight: 600; }
+
+/* Light colors */
+html[data-theme="light"] .cell-class   { background: #eaf7ea !important; }   /* green tint */
+html[data-theme="light"] .cell-holiday { background: #ffe9e9 !important; }   /* red tint  */
+html[data-theme="light"] .cell-exam    { background: #e8f4ff !important; }   /* cyan tint */
+
+/* Dark colors (subtle translucency) */
+html[data-theme="dark"] .cell-class   { background: rgba(76, 175, 80, 0.30) !important; color: #fff; }
+html[data-theme="dark"] .cell-holiday { background: rgba(244, 67, 54, 0.30) !important;  color: #fff; }
+html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !important;  color: #fff; }
+
+/* Fallback if the theme attribute isn't present (use OS pref) */
+@media (prefers-color-scheme: dark) {
+  table.schedule-mtwf thead tr { background: #444; color: #fff; }
+  table.schedule-mtwf tbody tr:nth-child(even) { background: #2a2a2a; }
 }
 </style>
 
-<table class="schedule-table">
-  <caption style="caption-side: top; text-align: left; font-weight: 600; padding: 6px 0;">
-    Course Schedule (Subject to minor changes)
-  </caption>
+````{div} full-width
+<table class="schedule-mtwf">
   <thead>
     <tr>
-      <th scope="col">Week</th>
-      <th scope="col">Mon (Date)</th>
-      <th scope="col">Mon Topic</th>
-      <th scope="col">Wed (Date)</th>
-      <th scope="col">Wed Topic</th>
+      <th>Week (Mon)</th>
+      <th>M</th>
+      <th>T</th>
+      <th>W</th>
+      <th>Th</th>
+      <th>F</th>
+      <th>Topics</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>01</td>
       <td>Aug 25, 2025</td>
-      <td>Introduction</td>
-      <td>Aug 27, 2025</td>
-      <td>1.1 Basics of Electrochemical Devices</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>Introduction <br> 1.1 Basics of Electrochemical Devices</td>
     </tr>
     <tr>
-      <td>02</td>
       <td>Sep 1, 2025</td>
-      <td>NO CLASS</td>
-      <td>Sep 3, 2025</td>
+      <td class="cell-holiday">HW1, Labor Day</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
       <td>1.2 Energy Storage</td>
     </tr>
     <tr>
-      <td>03</td>
       <td>Sep 8, 2025</td>
-      <td>1.3 Energy Conversion</td>
-      <td>Sep 10, 2025</td>
-      <td>2.1 Thermodynamics – Phase Transformation</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>1.3 Equivalent Circuit Models<br>2.1 Thermodynamics - Phase transformation</td>
     </tr>
     <tr>
-      <td>04</td>
       <td>Sep 15, 2025</td>
-      <td>2.2 Entropy</td>
-      <td>Sep 17, 2025</td>
-      <td>2.3 Intercalation Cathodes (LFP)</td>
+      <td class="cell-class">Class (HW2)</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>2.2 Entropy <br> 2.3 Intercalation Cathodes (LFP)</td>
     </tr>
     <tr>
-      <td>05</td>
       <td>Sep 22, 2025</td>
-      <td>2.4 Insertion Anodes (Graphite)</td>
-      <td>Sep 24, 2025</td>
-      <td>3.1 Electrode Kinetics (Butler–Volmer)</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>2.4 Insertion Anodes (Graphite)<br>3.1 Electrode Kinetics (Butler-Volmer)</td>
     </tr>
     <tr>
-      <td>06</td>
       <td>Sep 29, 2025</td>
-      <td>3.2 Electrode Kinetics (Marcus)</td>
-      <td>Oct 1, 2025</td>
-      <td>3.3 Electrode Kinetics (Advanced Models)</td>
+      <td class="cell-class">Class (HW3)</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>3.2 Electrode Kinetics (Marcus)<br>3.3 Electrode Kinetics (Advanced Models)</td>
     </tr>
     <tr>
-      <td>07</td>
       <td>Oct 6, 2025</td>
-      <td>Review for Mid-Term</td>
-      <td>Oct 8, 2025</td>
-      <td>Mid-term</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-exam">Midterm</td>
+      <td class="cell-exam">Midterm</td>
+      <td></td>
+      <td>Review for midterm</td>
     </tr>
     <tr>
-      <td>08</td>
       <td>Oct 13, 2025</td>
-      <td>4.1 Electrode–Electrolyte Interfaces</td>
-      <td>Oct 15, 2025</td>
-      <td>4.2 Electrode–Electrolyte Interfaces</td>
+      <td class="cell-holiday">Fall Break</td>
+      <td class="cell-holiday">Fall Break</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>4.1 Electrode-Electrolyte Interfaces</td>
     </tr>
     <tr>
-      <td>09</td>
       <td>Oct 20, 2025</td>
-      <td>4.3 Polymer Electrolytes and Ionic Liquids</td>
-      <td>Oct 22, 2025</td>
-      <td>5.1 Transport in Solids</td>
+      <td class="cell-class">Class (HW4)</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>4.2 Electrode-Electrolyte Interfaces<br>4.3 Polymer Electrolytes and Ionic Liquids</td>
     </tr>
     <tr>
-      <td>10</td>
       <td>Oct 27, 2025</td>
-      <td>5.2 Transport in Liquids</td>
-      <td>Oct 29, 2025</td>
-      <td>5.3 Porous Media</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td>Project</td>
+      <td>5.1 Transport in Solids <br> 5.2 Transport in Liquids</td>
     </tr>
     <tr>
-      <td>11</td>
       <td>Nov 3, 2025</td>
-      <td>6.1 Porous Electrode Theory</td>
-      <td>Nov 5, 2025</td>
-      <td>6.2 Modified Porous Electrode Theory</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>5.3 Porous media <br> 6.1 Porous Electrode Theory</td>
     </tr>
     <tr>
-      <td>12</td>
       <td>Nov 10, 2025</td>
-      <td>7.1 Battery Cell Modeling</td>
-      <td>Nov 12, 2025</td>
-      <td>7.2 Battery Pack Modeling</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>6.2 Modified Porous Electrode Theory<br>7.1 Battery Cell Modeling</td>
     </tr>
     <tr>
-      <td>13</td>
       <td>Nov 17, 2025</td>
-      <td>Battery Modeling PyBaMM (demo)</td>
-      <td>Nov 19, 2025</td>
-      <td>PyBaMM (demo)</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>7.2 Battery pack Modeling, PyBaMM (demo)</td>
     </tr>
     <tr>
-      <td>14</td>
       <td>Nov 24, 2025</td>
-      <td>No Class – Thanksgiving week</td>
-      <td>Nov 26, 2025</td>
-      <td>No Class – Thanksgiving week</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-holiday">Thanksgiving</td>
+      <td class="cell-holiday">Thanksgiving</td>
+      <td class="cell-holiday">Thanksgiving</td>
+      <td></td>
     </tr>
     <tr>
-      <td>15</td>
       <td>Dec 1, 2025</td>
-      <td>Review for Finals</td>
-      <td>Dec 3, 2025</td>
-      <td>Review for Finals</td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td class="cell-class">Class</td>
+      <td></td>
+      <td></td>
+      <td>Finals Review</td>
+    </tr>
+    <tr>
+      <td>Dec 8, 2025</td>
+      <td class="cell-exam">Final</td>
+      <td class="cell-exam">Final</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
-
+````
 
 <!-- ```{tableofcontents} -->
 <!-- ``` -->
