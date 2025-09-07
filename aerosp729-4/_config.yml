@@ -31,3 +31,14 @@ repository:
 html:
   use_issues_button: false
   use_repository_button: false
+
+# parse:
+#   myst_enable_extensions:
+#   - amsmath
+sphinx:
+  extra_extensions:
+    - sphinxcontrib.tikz
+  latex_elements:
+    preamble: |
+      \usepackage{tikz}
+      \usepackage{circuitikz}

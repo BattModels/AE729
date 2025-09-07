@@ -95,7 +95,7 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
     </tr>
     <tr>
       <td>Sep 1, 2025</td>
-      <td class="cell-holiday">HW1, Labor Day</td>
+      <td class="cell-holiday">Labor Day</td>
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
@@ -108,12 +108,12 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
-      <td></td>
+      <td>HW1 due</td>
       <td>1.3 Equivalent Circuit Models<br>2.1 Thermodynamics - Phase transformation</td>
     </tr>
     <tr>
       <td>Sep 15, 2025</td>
-      <td class="cell-class">Class (HW2)</td>
+      <td class="cell-class">Class</td>
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
@@ -126,12 +126,12 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
-      <td></td>
+      <td> HW2 due</td>
       <td>2.4 Insertion Anodes (Graphite)<br>3.1 Electrode Kinetics (Butler-Volmer)</td>
     </tr>
     <tr>
       <td>Sep 29, 2025</td>
-      <td class="cell-class">Class (HW3)</td>
+      <td class="cell-class">Class</td>
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
@@ -140,7 +140,7 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
     </tr>
     <tr>
       <td>Oct 6, 2025</td>
-      <td class="cell-class">Class</td>
+      <td class="cell-class">Class, HW3 due</td>
       <td></td>
       <td class="cell-exam">Midterm</td>
       <td class="cell-exam">Midterm</td>
@@ -158,7 +158,7 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
     </tr>
     <tr>
       <td>Oct 20, 2025</td>
-      <td class="cell-class">Class (HW4)</td>
+      <td class="cell-class">Class</td>
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
@@ -171,7 +171,7 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
       <td></td>
       <td class="cell-class">Class</td>
       <td></td>
-      <td>Project</td>
+      <td>HW4 due</td>
       <td>5.1 Transport in Solids <br> 5.2 Transport in Liquids</td>
     </tr>
     <tr>
@@ -214,7 +214,7 @@ html[data-theme="dark"] .cell-exam    { background: rgba(3, 169, 244, 0.30) !imp
       <td>Dec 1, 2025</td>
       <td class="cell-class">Class</td>
       <td></td>
-      <td class="cell-class">Class</td>
+      <td class="cell-class">Class, Project due</td>
       <td></td>
       <td></td>
       <td>Finals Review</td>
