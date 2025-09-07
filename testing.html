@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M1.3 - Electrochemical Testing &#8212; Electrochemical Energy Storage Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'testing';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Electrochemical Energy Storage Systems" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Electrochemical Energy Storage Systems - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Electrochemical Energy Storage Systems - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Electrochemical Energy Storage Systems
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">M1.3 - Electrochemical Testing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/testing.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>M1.3 - Electrochemical Testing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-circuit-elements">Basic Circuit Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistor">Resistor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor">Capacitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inductor">Inductor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-source">Voltage Source</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-source">Current Source</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrochemical-testing">Electrochemical Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galvanostatic-discharge">Galvanostatic discharge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiostatic-discharge">Potentiostatic Discharge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulse-current-profile">Pulse Current Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galvanostatic-intermittent-titration-technique-gitt">Galvanostatic Intermittent Titration Technique (GITT)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid-pulse-power-characterization-hppc">Hybrid Pulse Power Characterization (HPPC)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrochemical-impedance-spectroscopy-eis">Electrochemical Impedance Spectroscopy (EIS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecm-1-internal-resistance">ECM 1: Internal Resistance</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecm-2-parallel-r-c">ECM 2: Parallel R-C</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="m1-3-electrochemical-testing">
+<h1>M1.3 - Electrochemical Testing<a class="headerlink" href="#m1-3-electrochemical-testing" title="Link to this heading">#</a></h1>
+<section id="basic-circuit-elements">
+<h2>Basic Circuit Elements<a class="headerlink" href="#basic-circuit-elements" title="Link to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="resistor" src="_images/resistor.png" /></p>
+</aside>
+<section id="resistor">
+<h3>Resistor<a class="headerlink" href="#resistor" title="Link to this heading">#</a></h3>
+<p>A resistor dissipates electrical energy as heat and hinders the flow of electrical current in a circuit, <span class="math notranslate nohighlight">\(V = I R\)</span>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="capacitor" src="_images/capacitor.png" /></p>
+</aside>
+</section>
+<section id="capacitor">
+<h3>Capacitor<a class="headerlink" href="#capacitor" title="Link to this heading">#</a></h3>
+<p>A capacitor stores electrical energy as charge stored in the capacitor.</p>
+<div class="math notranslate nohighlight">
+\[Q = CV\]</div>
+<div class="math notranslate nohighlight">
+\[I = \frac{dQ}{dt} = C \frac{dV}{dt}\]</div>
+<div class="math notranslate nohighlight">
+\[\quad V(t) = \frac{1}{C} \int I(t) \, dt\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="inductor" src="_images/inductor.png" /></p>
+</aside>
+</section>
+<section id="inductor">
+<h3>Inductor<a class="headerlink" href="#inductor" title="Link to this heading">#</a></h3>
+<p>An inductor stores electrical energy in a magnetic field.</p>
+<div class="math notranslate nohighlight">
+\[V = L \frac{dI}{dt}\]</div>
+<div class="math notranslate nohighlight">
+\[
+I(t) = \frac{1}{L} \int V(t) \ dt
+\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="v_source" src="_images/voltage_source.png" /></p>
+</aside>
+</section>
+<section id="voltage-source">
+<h3>Voltage Source<a class="headerlink" href="#voltage-source" title="Link to this heading">#</a></h3>
+<p>A voltage source maintains a prescribed voltage difference independent of the current drawn. <span class="math notranslate nohighlight">\(V(t) = V_{\text{s}}\)</span></p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="i_source" src="_images/current_source.png" /></p>
+</aside>
+</section>
+<section id="current-source">
+<h3>Current Source<a class="headerlink" href="#current-source" title="Link to this heading">#</a></h3>
+<p>A current source maintains a prescribed current independent of the voltage across it. <span class="math notranslate nohighlight">\(I(t) = I_{\text{s}}\)</span></p>
+</section>
+</section>
+<section id="electrochemical-testing">
+<h2>Electrochemical Testing<a class="headerlink" href="#electrochemical-testing" title="Link to this heading">#</a></h2>
+<section id="galvanostatic-discharge">
+<h3>Galvanostatic discharge<a class="headerlink" href="#galvanostatic-discharge" title="Link to this heading">#</a></h3>
+<!-- ```{margin}
+![galvan](./images/testing/galvanostatic-2.png)
+``` --><aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="galvan" src="_images/galvan.png" /></p>
+</aside>
+<p>In a galvanostatic discharge, the cell is discharged at a constant current, and the terminal voltage is recorded as a function of time.
+From this test, total capacity of the cell, the energy content, and the effective internal resistance can be extracted.</p>
+<!-- ```{image} ./images/testing/galvan.png
+:alt: galvan
+:class: bg-primary mb-1
+:width: 300px
+:align: center
+``` -->
+<p>Consider the equivalent circuit with only an internal resistance, the voltage recorded is <span class="math notranslate nohighlight">\(V = V_{ocv} - I R_{int}\)</span>.  With a constant current, this can be used to extract the internal resistance.  The galvanostatic discharge for a graphite/LFP Li-ion cell is shown.</p>
+<p><img alt="galvan_ecm" src="_images/galvanostatic.png" /></p>
+<center><em>Galvanostatic discharge at I = 2.3 A</em></center>
+<!-- <img src="./images/testing/galvan.png" alt="galvan" width="200"/> -->
+</section>
+<section id="potentiostatic-discharge">
+<h3>Potentiostatic Discharge<a class="headerlink" href="#potentiostatic-discharge" title="Link to this heading">#</a></h3>
+<p>In a potentiostatic discharge, the cell is held at a fixed potential below its open-circuit voltage, and the current response is recorded over time.  This technique provides insight into reaction kinetics, mass transport, and capacitance-like behavior of the system for a series R-C circuit.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="galvan" src="_images/series.png" /></p>
+</aside>
+<p>Under a potentiostatic discharge,</p>
+<div class="math notranslate nohighlight">
+\[V_{const} = V_{ocv} - I R_{ct} - \frac{1}{C} \int I(t) dt\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>we make <span class="math notranslate nohighlight">\(\Delta V = V_{ocv} - V_{const}\)</span>.</p>
+</aside>
+<p>We can solve for the current dynamics as:</p>
+<div class="math notranslate nohighlight">
+\[\Delta V = I(t) R_{ct} +  \frac{1}{C} \int I(t) dt\]</div>
+<p>Differentiating both sides gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dI}{dt} R_{ct} = -\frac{1}{C_{dl}} I\]</div>
+<p>since <span class="math notranslate nohighlight">\(\Delta V\)</span> is a constant.  Solving this gives,</p>
+<div class="math notranslate nohighlight">
+\[
+I = I_0 \exp \Big(-\frac{t}{\tau}\Big), \tau = R_{ct} C_{dl}
+\]</div>
+<p><img alt="poten_ecm" src="_images/potentiostatic.png" /></p>
+<center><em>Potentiostatic discharge at V = 3.0 V</em></center>
+</section>
+<section id="pulse-current-profile">
+<h3>Pulse Current Profile<a class="headerlink" href="#pulse-current-profile" title="Link to this heading">#</a></h3>
+<p>A pulse current profile is a popular method where a constant current pulse <span class="math notranslate nohighlight">\(I_p\)</span> for a finite duration, <span class="math notranslate nohighlight">\(t_p\)</span> followed by a relaxation period, <span class="math notranslate nohighlight">\(t_{rest}\)</span> where the current is set to zero. This allows the system to approach a near-equilibrium state while monitoring transient behavior.  During the pulse, the voltage decreases due to resistance and other dynamics associated with the system.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><img alt="pulse" src="_images/pulse_ecm.png" /></p>
+</aside>
+<p>The measured voltage is,</p>
+<div class="math notranslate nohighlight">
+\[V = V_{\text{ocv}} - I R_{\text{int}} - V_{RC}\]</div>
+<p>Across the R-C element, Kirchoff’s law gives,</p>
+<div class="math notranslate nohighlight">
+\[I = I_{R_{ct}} + I_{C_{dl}} = \frac{V_{RC}}{R_{ct}} + C_{dl} \frac{dV_{RC}}{dt}\]</div>
+<p>For a galvanostatic discharge,</p>
+<div class="math notranslate nohighlight">
+\[V_{RC} = IR_{\text{ct}} \left(1 - e^{\frac{-t}{R_{\text{ct}} C_{\text{dl}}}} \right)\]</div>
+<p>During relaxation, the voltage recovers back towards the open circuit voltage.  The instantaneous voltage recovery is from the portion associated with the internal resistance, and then the voltage associated with the R-C element relaxes as shown in the figure below.</p>
+<p><img alt="poten_ecm" src="_images/pulse.png" /></p>
+<center><em>Pulse current profile</em></center></section>
+<section id="galvanostatic-intermittent-titration-technique-gitt">
+<h3>Galvanostatic Intermittent Titration Technique (GITT)<a class="headerlink" href="#galvanostatic-intermittent-titration-technique-gitt" title="Link to this heading">#</a></h3>
+<p>It involves applying a series of current pulses and monitoring the resulting voltage response.  The advantage of this technique is to extract the information contained in a galvanostatic discharge along with extracting the open circuit voltage.</p>
+<p><img alt="gitt" src="_images/gitt.png" /></p>
+</section>
+<section id="hybrid-pulse-power-characterization-hppc">
+<h3>Hybrid Pulse Power Characterization (HPPC)<a class="headerlink" href="#hybrid-pulse-power-characterization-hppc" title="Link to this heading">#</a></h3>
+<p>HPPC test is method designed to determine the power capability and resistance characteristics for electric vehicle applications.  A discharge pulse at a specified current, <span class="math notranslate nohighlight">\(I_d\)</span> is applied for 10 seconds, followed by a rest period.  Then, a charge pulse, <span class="math notranslate nohighlight">\(I_c = 0.75 I_d\)</span> is applied for 10 seconds.  This sequence is repeated at different SOC levels.  The fitting is done similar to pulse profile.
+<img alt="hppc" src="_images/hppc.png" /></p>
+<p><img alt="zoom" src="_images/hppc_zoom.png" /></p>
+<p>HPPC test can be used to extract the power capability of a cell by extracting the resistance and then using a simple internal resistance model to estimate the peak current at that SOC</p>
+<div class="math notranslate nohighlight">
+\[I_{d,pulse~power} = \frac{V_{ocv} - V_{min}}{R}\]</div>
+<p>then determining the power,</p>
+<div class="math notranslate nohighlight">
+\[P = V_{min} I_{d,pulse~power}\]</div>
+<p>.  Similarly, the charge region is determined,</p>
+<div class="math notranslate nohighlight">
+\[I_{c,pulse~power} = \frac{V_{max} - V_{ocv}}{R}\]</div>
+<p>then determining the power,</p>
+<div class="math notranslate nohighlight">
+\[P = V_{max} I_{c,pulse~power}\]</div>
+<p>.  This is shown below:
+<img alt="hppc" src="_images/hppc_R_power.png" /></p>
+</section>
+<section id="electrochemical-impedance-spectroscopy-eis">
+<h3>Electrochemical Impedance Spectroscopy (EIS)<a class="headerlink" href="#electrochemical-impedance-spectroscopy-eis" title="Link to this heading">#</a></h3>
+<p>In EIS, we apply a small sinusoidal perturbation (voltage or current) at angular frequency <span class="math notranslate nohighlight">\(\omega=2\pi f\)</span> and measure the linear response. Using complex notation,</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{V}(t) = \Re\{ \hat{V} e^{j\omega t}\}, \qquad 
+\tilde{I}(t) = \Re\{ \hat{I} e^{j\omega t}\},
+\]</div>
+<p>the <em>impedance</em> is the complex ratio</p>
+<div class="math notranslate nohighlight">
+\[
+Z(\omega) \equiv \frac{\hat{V}}{\hat{I}} = Z'(\omega) + j Z''(\omega).
+\]</div>
+<p>Plots of <span class="math notranslate nohighlight">\(Z''\)</span> vs. <span class="math notranslate nohighlight">\(Z'\)</span> give the <em>Nyquist</em> spectrum (no frequency axis shown), and <span class="math notranslate nohighlight">\(|Z|\)</span> and <span class="math notranslate nohighlight">\(\angle Z\)</span> vs. <span class="math notranslate nohighlight">\(f\)</span> give <em>Bode</em> magnitude and phase.</p>
+<ul class="simple">
+<li><p>Resistor <span class="math notranslate nohighlight">\(R\)</span>: <span class="math notranslate nohighlight">\(Z_R = R\)</span>.</p></li>
+<li><p>Capacitor <span class="math notranslate nohighlight">\(C\)</span>: <span class="math notranslate nohighlight">\(Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}\)</span>.</p></li>
+<li><p>Inductor <span class="math notranslate nohighlight">\(L\)</span>: <span class="math notranslate nohighlight">\(Z_L = j\omega L\)</span>.</p></li>
+</ul>
+<section id="ecm-1-internal-resistance">
+<h4>ECM 1: Internal Resistance<a class="headerlink" href="#ecm-1-internal-resistance" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[Z(\omega) = R_0\]</div>
+<p><strong>Nyquist:</strong> a single point at <span class="math notranslate nohighlight">\((Z',Z'')=(R_0,0)\)</span>.
+<strong>Bode:</strong> <span class="math notranslate nohighlight">\(|Z|=R_0\)</span>, phase <span class="math notranslate nohighlight">\(0^\circ\)</span> at all <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</section>
+<section id="ecm-2-parallel-r-c">
+<h4>ECM 2: Parallel R-C<a class="headerlink" href="#ecm-2-parallel-r-c" title="Link to this heading">#</a></h4>
+<p>The complex impedance is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+Z(\omega) = = \frac{1}{\dfrac{1}{R} + j\omega C} = \frac{R}{1 + j\omega R C}
+\]</div>
+<p>Define the dimensionless frequency <span class="math notranslate nohighlight">\(x \equiv \omega \tau\)</span> with <span class="math notranslate nohighlight">\(\tau \equiv R C\)</span>.</p>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[
+Z(\omega) = \frac{R}{1 + j x}.
+\]</div>
+<p>Multiply numerator and denominator by the complex conjugate to obtain the real and imaginary parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Z(\omega) = \frac{R(1 - j x)}{1 + x^2}
+\quad\Rightarrow\quad
+\begin{aligned}
+Z'(\omega) &amp;= \Re\{Z\} = \frac{R}{1 + x^2},\\[6pt]
+Z''(\omega) &amp;= \Im\{Z\} = -\,\frac{R x}{1 + x^2}.
+\end{aligned}
+\end{split}\]</div>
+<p><em>Magnitude and phase</em></p>
+<div class="math notranslate nohighlight">
+\[
+|Z(\omega)| = \frac{R}{\sqrt{1 + x^2}} = \frac{R}{\sqrt{1 + (\omega R C)^2}},
+\qquad
+\phi(\omega) = \arg Z = -\arctan(x) = -\arctan(\omega R C).
+\]</div>
+<p><em>Low/high frequency limits</em></p>
+<div class="math notranslate nohighlight">
+\[
+\omega \to 0: \quad Z(\omega)\to R \quad(\text{capacitor open -- branch is resistive}),
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\omega \to \infty: \quad Z(\omega)\to 0 \quad(\text{capacitor short -- branch short-circuits}).
+\]</div>
+<p><em>Nyquist (parametric) form</em></p>
+<p>Parametrically the Nyquist plot is</p>
+<div class="math notranslate nohighlight">
+\[
+\big( Z'(\omega),\; -Z''(\omega) \big)
+= \left( \frac{R}{1+x^2},\; \frac{R x}{1+x^2} \right),\qquad x\in[0,\infty).
+\]</div>
+<p>This parameterization traces a semicircle: algebraically one finds</p>
+<div class="math notranslate nohighlight">
+\[
+\Big(Z' - \frac{R}{2}\Big)^2 + (Z'')^2 = \frac{R^2}{4},
+\]</div>
+<p>i.e. a circle centered at <span class="math notranslate nohighlight">\(\big(\frac{R}{2},\,0\big)\)</span> with radius <span class="math notranslate nohighlight">\(R/2\)</span>.  Since <span class="math notranslate nohighlight">\(Z''\le0\)</span> the physical branch produces the lower half of the circle (negative imaginary axis).  The semicircle center and radius make the parallel <span class="math notranslate nohighlight">\(R\parallel C\)</span> useful pedagogically: it produces a single ideal semicircle in Nyquist without needing an explicit series resistor. Adding a series <span class="math notranslate nohighlight">\(R_0\)</span> simply translates the circle right by <span class="math notranslate nohighlight">\(R_0\)</span>.</p>
+<p><img alt="eis" src="_images/eis.png" /></p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Electrochemical Energy Storage Systems</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-circuit-elements">Basic Circuit Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resistor">Resistor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitor">Capacitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inductor">Inductor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-source">Voltage Source</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-source">Current Source</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrochemical-testing">Electrochemical Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galvanostatic-discharge">Galvanostatic discharge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiostatic-discharge">Potentiostatic Discharge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulse-current-profile">Pulse Current Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galvanostatic-intermittent-titration-technique-gitt">Galvanostatic Intermittent Titration Technique (GITT)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid-pulse-power-characterization-hppc">Hybrid Pulse Power Characterization (HPPC)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrochemical-impedance-spectroscopy-eis">Electrochemical Impedance Spectroscopy (EIS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecm-1-internal-resistance">ECM 1: Internal Resistance</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecm-2-parallel-r-c">ECM 2: Parallel R-C</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amal Sebastian
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

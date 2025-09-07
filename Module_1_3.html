@@ -1,0 +1,1883 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Galvanostatic discharge &#8212; Electrochemical Energy Storage Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module_1_3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Electrochemical Energy Storage Systems - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Electrochemical Energy Storage Systems - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Electrochemical Energy Storage Systems
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Module_1_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Galvanostatic discharge</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Galvanostatic discharge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiostatic-discharge">Potentiostatic discharge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pulse">Pulse</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ocv-gitt">OCV (GITT)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hppc">HPPC</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#warburg-impedance-cpe">Warburg impedance (CPE)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eis">EIS</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pybamm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zsh:1: command not found: pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>niceplots
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zsh:1: command not found: pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pybamm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">niceplots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">niceplots</span><span class="o">.</span><span class="n">get_style</span><span class="p">())</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">niceplots</span><span class="o">.</span><span class="n">get_colors_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pybamm</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pybamm&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="galvanostatic-discharge">
+<h1>Galvanostatic discharge<a class="headerlink" href="#galvanostatic-discharge" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1"># ax[0].plot(time, voltage, color=colors[0])</span>
+<span class="c1"># ax[0].set_ylabel(&quot;Voltage [V]&quot;)</span>
+<span class="c1"># ax[0].set_xlabel(&quot;Time [s]&quot;)</span>
+<span class="c1"># ax[1].plot(time, current, color=colors[0])</span>
+<span class="c1"># ax[1].set_ylabel(&quot;Current [A]&quot;)</span>
+<span class="c1"># ax[1].set_xlabel(&quot;Time [s]&quot;)</span>
+<span class="c1"># plt.show()</span>
+
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;Discharge at 1C for 1 hours&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+
+<span class="n">voltage</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;1C discharge&quot;</span><span class="p">)</span>
+
+
+<span class="n">soc_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">x100</span><span class="p">,</span> <span class="n">y100</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">get_min_max_stoichiometries</span><span class="p">(</span>
+    <span class="n">dfn_params</span>
+<span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">InputParameter</span><span class="p">(</span><span class="s2">&quot;SOC&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+<span class="n">c_n_max</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in negative electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">c_p_max</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in positive electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">dfn_params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Initial concentration in negative electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">c_n_max</span><span class="p">,</span>
+        <span class="s2">&quot;Initial concentration in positive electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">y</span> <span class="o">*</span> <span class="n">c_p_max</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">positive_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Positive electrode OCP [V]&quot;</span><span class="p">]</span>
+<span class="n">negative_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Negative electrode OCP [V]&quot;</span><span class="p">]</span>
+
+<span class="n">neg_sto</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">pos_sto</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+
+<span class="n">OCV</span> <span class="o">=</span> <span class="n">positive_ocp</span><span class="p">(</span><span class="n">pos_sto</span><span class="p">)</span> <span class="o">-</span> <span class="n">negative_ocp</span><span class="p">(</span><span class="n">neg_sto</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soc_range</span> <span class="o">*</span> <span class="n">capacity</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">OCV</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;OCV&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">capacity</span><span class="p">,</span>  <span class="c1"># x-axis values</span>
+    <span class="n">voltage</span><span class="p">,</span>   <span class="c1"># lower curve</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="n">capacity</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">OCV</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>  <span class="c1"># interpolate OCV onto same x grid</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Loss&quot;</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="c1"># plt.show()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Capacity [A.h]&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;galvanostatic.pdf&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;galvanostatic.pdf&quot;</span><span class="p">)</span>
+
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-09-06 15:44:10.852 - [WARNING] callbacks.on_experiment_infeasible_event(254): 
+
+	Experiment is infeasible: &#39;event: Minimum voltage [V]&#39; was triggered during &#39;Discharge at 1C for 1 hours&#39;. The returned solution only contains up to step 1 of cycle 1. 
+WARNING:pybamm.logger:
+
+	Experiment is infeasible: &#39;event: Minimum voltage [V]&#39; was triggered during &#39;Discharge at 1C for 1 hours&#39;. The returned solution only contains up to step 1 of cycle 1. 
+</pre></div>
+</div>
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_54d3b293-31f3-461c-93f5-2cef1063faff", "galvanostatic.pdf", 23873)</script><img alt="_images/3211d417ecf0e36ff485d7eb4de08d5357dbba9fabe28344bdb3fb5dbbf2b12f.png" src="_images/3211d417ecf0e36ff485d7eb4de08d5357dbba9fabe28344bdb3fb5dbbf2b12f.png" />
+</div>
+</div>
+<p>Capacity = <span class="math notranslate nohighlight">\(\int I dt\)</span></p>
+<p>Internal Resistance (SOC / Time) = <span class="math notranslate nohighlight">\(\frac{OCV - V}{I}\)</span></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="potentiostatic-discharge">
+<h1>Potentiostatic discharge<a class="headerlink" href="#potentiostatic-discharge" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="c1"># &quot;Rest for 100 seconds&quot;,</span>
+          <span class="c1"># &quot;Discharge at 1C for 30 seconds&quot;,</span>
+        <span class="s2">&quot;Discharge at 1C until 3.2 V&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Hold at 3.2 V until 50mA&quot;</span>
+    <span class="p">]</span>
+    <span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="n">voltage</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">voltage</span> <span class="o">==</span> <span class="mf">3.2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">current_max</span> <span class="o">=</span> <span class="n">current</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">current_normal</span> <span class="o">=</span> <span class="n">current</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">/</span> <span class="n">current_max</span>
+
+<span class="n">idx2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">current_normal</span> <span class="o">&lt;</span> <span class="mf">0.367</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">time_normal</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="n">time_normal</span><span class="p">[</span><span class="n">idx2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">current_max</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_normal</span><span class="p">,</span> <span class="n">current_max</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">time_normal</span> <span class="o">/</span> <span class="n">tau</span><span class="p">)),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;2.3$e^{\frac{-t}</span><span class="si">{1682}</span><span class="s2">}$&quot;</span><span class="p">)</span>
+<span class="c1"># ax[1].plot(time_normal, current_normal, color=colors[0])</span>
+<span class="c1"># ax[1].set_ylabel(&quot;Current</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">voltage</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">-</span><span class="n">time</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">current</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="c1"># plt.savefig(&quot;potentiostatic.pdf&quot;)</span>
+
+<span class="c1"># from google.colab import files</span>
+<span class="c1"># files.download(&quot;potentiostatic.pdf&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.3
+1682.4933680001734
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f96704eb590&gt;
+</pre></div>
+</div>
+<img alt="_images/a6be25f27d8676818d97da9640e199a2cf371aac5d84bfd1b0d99cca8d1037b4.png" src="_images/a6be25f27d8676818d97da9640e199a2cf371aac5d84bfd1b0d99cca8d1037b4.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pulse">
+<h1>Pulse<a class="headerlink" href="#pulse" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="sa">f</span><span class="s2">&quot;Discharge at 0.5C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 3 minutes&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="p">)</span>
+
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="n">voltage</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+
+<span class="n">h_bar</span><span class="o">=</span> <span class="mf">3.50328755</span>
+<span class="c1"># Horizontal dotted reference lines</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span><span class="o">-</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">h_bar</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Vertical dotted line at t=10</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Δv0 arrow</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">voltage</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="n">h_bar</span><span class="p">),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;&lt;-&gt;&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span><span class="o">+</span><span class="n">h_bar</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\Delta V_0 = R_{\text</span><span class="si">{int}</span><span class="s2">} \times I$&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Δv∞ arrow</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">max</span><span class="p">(</span><span class="n">voltage</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">min</span><span class="p">(</span><span class="n">voltage</span><span class="p">)),</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;&lt;-&gt;&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span><span class="o">+</span><span class="n">h_bar</span><span class="p">),</span> <span class="sa">r</span><span class="s2">&quot;$\Delta V_\infty = (R_{\text</span><span class="si">{int}</span><span class="s2">} + R_{\text</span><span class="si">{ct}</span><span class="s2">}) \times I$&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;pulse.pdf&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;pulse.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_03d1a5d5-6a2d-46b6-ac22-e572a07960b2", "pulse.pdf", 23966)</script><img alt="_images/392bc0b6369237ef2a9a68462e9decb9d2a90e47b4c67d9922c68b85fa568e61.png" src="_images/392bc0b6369237ef2a9a68462e9decb9d2a90e47b4c67d9922c68b85fa568e61.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.54793825 3.54791302 3.54788781 3.54783748 3.54773716 3.54753788
+ 3.5471446  3.54637802 3.5456309  3.5449022  3.5434864  3.54213179
+ 3.5395946  3.53726096 3.53510314 3.53309733 3.52947243 3.52625696
+ 3.52334872 3.52069237 3.5182285  3.51549183 3.51297756 3.5106165
+ 3.50837807 3.50627701 3.50429147 3.50238649 3.50056545 3.49881049
+ 3.49712875 3.49549826 3.49392716 3.49092189 3.48808419 3.48539232
+ 3.48282809 3.47802987 3.47359411 3.46944592 3.46554833 3.46184905
+ 3.45837749 3.45502142 3.45424475 3.50328755 3.50340496 3.50349826
+ 3.5036828  3.5040435  3.50473495 3.50539948 3.50603891 3.50726508
+ 3.50841235 3.51049369 3.51232814 3.51395922 3.51542316 3.51794243
+ 3.51986883 3.52169669 3.52331481 3.52476499 3.52607687 3.52727332
+ 3.52837279 3.53033555 3.53204673 3.53355905 3.53491073 3.53613123
+ 3.53724258 3.53920248 3.5408816  3.54233879 3.54361954 3.54475792
+ 3.54670389 3.54830942 3.54965344 3.55079477 3.551778   3.55263451
+ 3.55405549 3.55507316 3.55590152 3.5565839  3.55715183 3.5576273
+ 3.55802729 3.55836465 3.55864939 3.55909355 3.55941412 3.55964747
+ 3.55981657 3.55993821 3.56002556 3.5600888  3.56016879 3.56021205
+ 3.56023447 3.56024442 3.56024877 3.56025089]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fitting 1RC circuit, procedure similar to HW</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ocv-gitt">
+<h1>OCV (GITT)<a class="headerlink" href="#ocv-gitt" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;Discharge at C/20 for 1 hour&quot;</span><span class="p">,</span> <span class="s2">&quot;Rest for 1 hour&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span>
+    <span class="o">+</span>  <span class="p">[</span><span class="s2">&quot;Charge at C/20 for 1 hour&quot;</span><span class="p">,</span> <span class="s2">&quot;Rest for 1 hour&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span>
+<span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+
+<span class="n">voltage</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span> <span class="o">/</span> <span class="mi">3600</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [hr]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="c1"># plt.show()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;C/20&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [hr]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;gitt.pdf&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;gitt.pdf&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_2a6fd1eb-6472-472b-aa7f-d4d7a87a8a9a", "gitt.pdf", 20010)</script><img alt="_images/ce7bf3e44e4b43f016d7dac5882ae31698a2f00cbb10c3148343fd5e80f69dfe.png" src="_images/ce7bf3e44e4b43f016d7dac5882ae31698a2f00cbb10c3148343fd5e80f69dfe.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hppc">
+<h1>HPPC<a class="headerlink" href="#hppc" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+      <span class="p">[</span><span class="s2">&quot;Rest for 1 hour&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Discharge at 0.5C for 12 minutes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 1 hour&quot;</span><span class="p">]</span><span class="o">+</span>
+     <span class="p">[</span>
+        <span class="s2">&quot;Rest for 1 hour&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discharge at 1.5C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 50 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Charge at 1.125C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discharge at 0.5C for 12 minutes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 1 hour&quot;</span>
+    <span class="p">]</span><span class="o">*</span><span class="mi">9</span>
+    <span class="p">)</span>
+
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="n">voltage_hppc</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time_hppc</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">current_hppc</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity_hppc</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_hppc</span><span class="p">,</span> <span class="n">voltage_hppc</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_hppc</span><span class="p">,</span> <span class="n">current_hppc</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># plt.savefig(&quot;hppc.pdf&quot;)</span>
+
+<span class="c1"># from google.colab import files</span>
+<span class="c1"># files.download(&quot;hppc.pdf&quot;)</span>
+
+<span class="c1"># plt.show()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-09-06 21:25:07.271 - [WARNING] callbacks.on_experiment_infeasible_event(254): 
+
+	Experiment is infeasible: &#39;event: Minimum voltage [V]&#39; was triggered during &#39;Discharge at 0.5C for 12 minutes&#39;. The returned solution only contains up to step 1 of cycle 56. 
+WARNING:pybamm.logger:
+
+	Experiment is infeasible: &#39;event: Minimum voltage [V]&#39; was triggered during &#39;Discharge at 0.5C for 12 minutes&#39;. The returned solution only contains up to step 1 of cycle 56. 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Time [s]&#39;)
+</pre></div>
+</div>
+<img alt="_images/c9c8bb949ff0a8de11176515028b6a6767b4a9912586f3c6b4e0a96e58c6e91a.png" src="_images/c9c8bb949ff0a8de11176515028b6a6767b4a9912586f3c6b4e0a96e58c6e91a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+     <span class="p">[</span>
+        <span class="s2">&quot;Discharge at 1.5C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 50 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Charge at 1.125C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 100 seconds&quot;</span><span class="p">,</span>
+    <span class="p">]</span><span class="o">*</span><span class="mi">1</span>
+    <span class="p">)</span>
+
+
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="n">voltage</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># plt.savefig(&quot;hppc_zoom.pdf&quot;)</span>
+
+<span class="c1"># from google.colab import files</span>
+<span class="c1"># files.download(&quot;hppc_zoom.pdf&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Time [s]&#39;)
+</pre></div>
+</div>
+<img alt="_images/82eb6730e2d8c8d90b404b3acb91a94a6b41f1c470de4a1d7dda9447324621ae.png" src="_images/82eb6730e2d8c8d90b404b3acb91a94a6b41f1c470de4a1d7dda9447324621ae.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">current</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">idx2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">current</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">volt_pdisc</span> <span class="o">=</span> <span class="n">voltage</span><span class="p">[</span><span class="n">idx1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">idx2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">time_pdisc</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">idx1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">idx2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+<span class="n">volt_offset</span> <span class="o">=</span> <span class="n">volt_pdisc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">volt_pdisc</span> <span class="o">=</span> <span class="n">volt_pdisc</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">volt_pdisc</span><span class="p">)</span>
+<span class="n">volt_scaling</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">volt_pdisc</span><span class="p">)</span>
+
+<span class="n">volt_pdisc</span> <span class="o">=</span> <span class="n">volt_pdisc</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">volt_pdisc</span><span class="p">)</span>
+
+<span class="n">t_offset</span> <span class="o">=</span> <span class="n">time_pdisc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">time_pdisc</span> <span class="o">=</span> <span class="n">time_pdisc</span> <span class="o">-</span> <span class="n">time_pdisc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">tau_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">volt_pdisc</span> <span class="o">&gt;</span> <span class="mf">0.67</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">tau_disc</span> <span class="o">=</span> <span class="n">time_pdisc</span><span class="p">[</span><span class="n">tau_idx</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tau_idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">volt_pchar</span> <span class="o">=</span> <span class="n">voltage</span><span class="p">[</span><span class="n">idx2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">time_pchar</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">idx2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="n">volt_offset_char</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">volt_pchar</span><span class="p">)</span>
+<span class="n">volt_pchar</span> <span class="o">=</span> <span class="n">volt_pchar</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">volt_pchar</span><span class="p">)</span>
+<span class="n">volt_scaling_char</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">volt_pchar</span><span class="p">)</span>
+
+<span class="n">volt_pchar</span> <span class="o">=</span> <span class="n">volt_pchar</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">volt_pchar</span><span class="p">)</span>
+
+<span class="n">t_offset_char</span> <span class="o">=</span> <span class="n">time_pchar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">time_pchar</span> <span class="o">=</span> <span class="n">time_pchar</span> <span class="o">-</span> <span class="n">time_pchar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">tau_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">volt_pchar</span> <span class="o">&lt;</span> <span class="mf">0.33</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">tau_char</span> <span class="o">=</span> <span class="n">time_pchar</span><span class="p">[</span><span class="n">tau_idx</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tau_char</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.970551503580026
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">()</span>
+
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Experiment</span><span class="p">(</span>
+     <span class="p">[</span>
+        <span class="s2">&quot;Discharge at 1.5C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 50 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Charge at 1.125C for 10 seconds&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Rest for 50 seconds&quot;</span><span class="p">,</span>
+    <span class="p">]</span><span class="o">*</span><span class="mi">1</span>
+    <span class="p">)</span>
+
+
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">dfn_model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">dfn_params</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+
+<span class="n">voltage</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+<span class="n">capacity</span> <span class="o">=</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Discharge capacity [A.h]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">idx1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">idx2</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">volt_offset</span> <span class="o">+</span> <span class="n">volt_scaling</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">idx1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">idx2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">-</span> <span class="n">t_offset</span><span class="p">)</span><span class="o">/</span><span class="n">tau_disc</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">idx2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:],</span> <span class="n">volt_offset_char</span> <span class="o">+</span> <span class="n">volt_scaling_char</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">idx2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">t_offset_char</span><span class="p">)</span><span class="o">/</span><span class="n">tau_char</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">volt_offset</span><span class="p">,</span> <span class="n">volt_scaling</span><span class="p">,</span> <span class="n">t_offset</span><span class="p">,</span> <span class="n">tau_disc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">volt_offset_char</span><span class="p">,</span> <span class="n">volt_scaling_char</span><span class="p">,</span> <span class="n">t_offset_char</span><span class="p">,</span> <span class="n">tau_char</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mf">3.45</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;3.4 + 0.09($1 - e^{-\frac{t-10}</span><span class="si">{9.2}</span><span class="s2">}$)&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mf">3.63</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;3.57 + 0.19$e^{-\frac{t-70}</span><span class="si">{4.5}</span><span class="s2">}$&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;hppc_zoom.pdf&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;hppc_zoom.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3967386204932577 0.09764755095845468 10.000000000000002 9.16497998611378
+3.569689186821537 0.19858895192836235 70.00000000000001 4.970551503580026
+</pre></div>
+</div>
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_7ef293fd-8346-4098-b072-c7ca2e3e5d3b", "hppc_zoom.pdf", 21886)</script><img alt="_images/3839ff07c6edd68677139931cf6db06bb151e14a121c164233558afdcbb22f40.png" src="_images/3839ff07c6edd68677139931cf6db06bb151e14a121c164233558afdcbb22f40.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">current_hppc</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">idx2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">current_hppc</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breaks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">idx1</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Start/end indices of each contiguous block</span>
+<span class="n">starts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">breaks</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">ends</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">breaks</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># (start, end) value pairs</span>
+<span class="n">value_pairs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">idx1</span><span class="p">[</span><span class="n">starts</span><span class="p">],</span> <span class="n">idx1</span><span class="p">[</span><span class="n">ends</span><span class="p">]))</span>
+<span class="n">voltage_lims</span> <span class="o">=</span> <span class="n">voltage_hppc</span><span class="p">[</span><span class="n">value_pairs</span><span class="p">]</span>
+
+<span class="n">v_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">voltage_lims</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">power</span> <span class="o">=</span> <span class="n">v_avg</span> <span class="o">*</span> <span class="n">current_hppc</span><span class="p">[</span><span class="n">idx1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]),</span> <span class="n">power</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]),</span> <span class="n">power</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;DOD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Power [W]&quot;</span><span class="p">)</span>
+<span class="c1"># plt.savefig(&quot;hppc_power.pdf&quot;)</span>
+
+<span class="c1"># from google.colab import files</span>
+<span class="c1"># files.download(&quot;hppc_power.pdf&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Power [W]&#39;)
+</pre></div>
+</div>
+<img alt="_images/21fd1dfaeceb4dc83ce5a59b5615c5c053d6700d2cbe933c665ec9d57601cb4a.png" src="_images/21fd1dfaeceb4dc83ce5a59b5615c5c053d6700d2cbe933c665ec9d57601cb4a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx_before_jumps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">idx1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">disc_end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">idx1</span><span class="p">[</span><span class="n">idx_before_jumps</span><span class="p">],</span> <span class="p">[</span><span class="n">idx1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]))</span>
+<span class="n">disc_start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(([</span><span class="n">idx1</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">idx1</span><span class="p">[</span><span class="n">idx_before_jumps</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx_before_jumps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">idx2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">char_end</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">idx2</span><span class="p">[</span><span class="n">idx_before_jumps</span><span class="p">],</span> <span class="p">[</span><span class="n">idx2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]))</span>
+<span class="n">char_start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(([</span><span class="n">idx2</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">idx2</span><span class="p">[</span><span class="n">idx_before_jumps</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R_disc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">voltage_hppc</span><span class="p">[</span><span class="n">disc_end</span><span class="p">]</span> <span class="o">-</span> <span class="n">voltage_hppc</span><span class="p">[</span><span class="n">disc_start</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">current_hppc</span><span class="p">[</span><span class="n">disc_end</span><span class="p">]</span> <span class="o">-</span> <span class="n">current_hppc</span><span class="p">[</span><span class="n">disc_start</span><span class="p">]))</span>
+<span class="n">R_char</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">voltage_hppc</span><span class="p">[</span><span class="n">char_end</span><span class="p">]</span> <span class="o">-</span> <span class="n">voltage_hppc</span><span class="p">[</span><span class="n">char_start</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">current_hppc</span><span class="p">[</span><span class="n">char_end</span><span class="p">]</span> <span class="o">-</span> <span class="n">current_hppc</span><span class="p">[</span><span class="n">char_start</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]),</span> <span class="n">R_disc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;discharge&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]),</span> <span class="n">R_char</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;charge&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;DOD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Resistance [Ohm]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;hppc_R.pdf&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;hppc_R.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_9c0e821b-0646-4495-b989-fa9fcb34fbe8", "hppc_R.pdf", 17890)</script><img alt="_images/e503a63a01cb79bb63b367548f1e6723e580661f0a4fc8d13c257ddf8ba7dada.png" src="_images/e503a63a01cb79bb63b367548f1e6723e580661f0a4fc8d13c257ddf8ba7dada.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parameter_values</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">soc_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span> <span class="o">-</span> <span class="n">delta</span>
+<span class="n">soc_range_char</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span> <span class="o">-</span> <span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">240.</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta</span>
+<span class="c1"># soc_range = np.linspace(0.0, 1.0, 32)</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">x100</span><span class="p">,</span> <span class="n">y100</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">get_min_max_stoichiometries</span><span class="p">(</span>
+    <span class="n">parameter_values</span>
+<span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">InputParameter</span><span class="p">(</span><span class="s2">&quot;SOC&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+<span class="n">c_n_max</span> <span class="o">=</span> <span class="n">parameter_values</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in negative electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">c_p_max</span> <span class="o">=</span> <span class="n">parameter_values</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in positive electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">parameter_values</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Initial concentration in negative electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">c_n_max</span><span class="p">,</span>
+        <span class="s2">&quot;Initial concentration in positive electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">y</span> <span class="o">*</span> <span class="n">c_p_max</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">positive_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Positive electrode OCP [V]&quot;</span><span class="p">]</span>
+<span class="n">negative_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Negative electrode OCP [V]&quot;</span><span class="p">]</span>
+
+<span class="n">neg_sto</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">pos_sto</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+<span class="n">OCV</span> <span class="o">=</span> <span class="n">positive_ocp</span><span class="p">(</span><span class="n">pos_sto</span><span class="p">)</span> <span class="o">-</span> <span class="n">negative_ocp</span><span class="p">(</span><span class="n">neg_sto</span><span class="p">)</span>
+
+<span class="n">neg_sto</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">soc_range_char</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">pos_sto</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">soc_range_char</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+<span class="n">OCV_char</span> <span class="o">=</span> <span class="n">positive_ocp</span><span class="p">(</span><span class="n">pos_sto</span><span class="p">)</span> <span class="o">-</span> <span class="n">negative_ocp</span><span class="p">(</span><span class="n">neg_sto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_min</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">power_disc</span> <span class="o">=</span> <span class="n">V_min</span> <span class="o">*</span> <span class="p">(</span><span class="n">OCV</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">V_min</span><span class="p">)</span> <span class="o">/</span> <span class="n">R_disc</span>
+<span class="n">power_char</span> <span class="o">=</span> <span class="mf">3.5</span> <span class="o">*</span> <span class="p">(</span><span class="mf">3.5</span> <span class="o">-</span> <span class="n">OCV_char</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">R_char</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]),</span> <span class="n">power_disc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Discharge&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]),</span> <span class="n">power_char</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Charge&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;DOD&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Power [W]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;hppc_power.pdf&quot;</span><span class="p">)</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;hppc_power.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_c11eea0f-e0e9-407a-abd8-68c7f8ba5b83", "hppc_power.pdf", 17541)</script><img alt="_images/80932286196e2f6949f27979f6383092ed79a7d3c79bbbc21f4f2d640c54ac21.png" src="_images/80932286196e2f6949f27979f6383092ed79a7d3c79bbbc21f4f2d640c54ac21.png" />
+</div>
+</div>
+<p>We can test power capabilities at every 10% DOD of the cell.</p>
+<p>We can compute <span class="math notranslate nohighlight">\(R_{disc}\)</span> and <span class="math notranslate nohighlight">\(R_{charge}\)</span>, from a simple <span class="math notranslate nohighlight">\(\Delta V/I\)</span> formula and get the resistances as functions fo SOC.</p>
+<p>If we assume a simple internal resistance model:</p>
+<p>We can express the current as:
+<span class="math notranslate nohighlight">\(I  = \frac{OCV(Z) - V}{R}\)</span></p>
+<p>then power is V * I,</p>
+<p>for discharge power pulse we clamp V to <span class="math notranslate nohighlight">\(V_{min}\)</span> and for charge <span class="math notranslate nohighlight">\(V_{max}\)</span>.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="warburg-impedance-cpe">
+<h1>Warburg impedance (CPE)<a class="headerlink" href="#warburg-impedance-cpe" title="Link to this heading">#</a></h1>
+<p>GITT/PITT? Diffusion coefficient extraction for warburg? Might be too much.</p>
+<p>We can show GITT as a technique to extract OCV, RC values and diffusion coefficient all in one experiment.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="eis">
+<h1>EIS<a class="headerlink" href="#eis" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pybammeis</span><span class="o">==</span><span class="m">0</span>.1.5
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pybammeis==0.1.5
+  Downloading pybammeis-0.1.5-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: pybamm&gt;=24.9 in /usr/local/lib/python3.12/dist-packages (from pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (25.8.0)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from pybammeis==0.1.5) (3.10.0)
+Requirement already satisfied: anytree&gt;=2.8.0 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.13.0)
+Requirement already satisfied: casadi==3.6.7 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.6.7)
+Requirement already satisfied: numpy&lt;2.0.0,&gt;=1.23.5 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.26.4)
+Requirement already satisfied: pandas&gt;=1.5.0 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.2.2)
+Requirement already satisfied: platformdirs in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.4.0)
+Requirement already satisfied: pooch&gt;=1.8.1 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.8.2)
+Requirement already satisfied: posthog in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.7.4)
+Requirement already satisfied: pybammsolvers in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.1.0)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.0.2)
+Requirement already satisfied: scipy&gt;=1.11.4 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.16.1)
+Requirement already satisfied: sympy&gt;=1.12 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.13.3)
+Requirement already satisfied: typing-extensions&gt;=4.10.0 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.15.0)
+Requirement already satisfied: xarray&gt;=2022.6.0 in /usr/local/lib/python3.12/dist-packages (from pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2025.8.0)
+Collecting bpx&lt;0.6.0,&gt;=0.5.0 (from pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading bpx-0.5.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting jupyter (from pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading jupyter-1.1.1-py2.py3-none-any.whl.metadata (2.0 kB)
+Collecting pybtex&gt;=0.25.0 (from pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading pybtex-0.25.1-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting scikit-fem&gt;=8.1.0 (from pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading scikit_fem-11.0.0-py3-none-any.whl.metadata (34 kB)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.67.1)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (1.3.3)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (4.59.2)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (1.4.9)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (25.0)
+Requirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (11.3.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (3.2.3)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;pybammeis==0.1.5) (2.9.0.post0)
+Requirement already satisfied: pydantic&gt;=2.6 in /usr/local/lib/python3.12/dist-packages (from bpx&lt;0.6.0,&gt;=0.5.0-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.11.7)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas&gt;=1.5.0-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas&gt;=1.5.0-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2025.2)
+Requirement already satisfied: requests&gt;=2.19.0 in /usr/local/lib/python3.12/dist-packages (from pooch&gt;=1.8.1-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.32.4)
+Collecting latexcodec&gt;=1.0.4 (from pybtex&gt;=0.25.0-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading latexcodec-3.0.1-py3-none-any.whl.metadata (5.2 kB)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;pybammeis==0.1.5) (1.17.0)
+Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy&gt;=1.12-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.3.0)
+Requirement already satisfied: notebook in /usr/local/lib/python3.12/dist-packages (from jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.5.7)
+Requirement already satisfied: jupyter-console in /usr/local/lib/python3.12/dist-packages (from jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.6.3)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.12/dist-packages (from jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (7.16.6)
+Requirement already satisfied: ipykernel in /usr/local/lib/python3.12/dist-packages (from jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.17.1)
+Requirement already satisfied: ipywidgets in /usr/local/lib/python3.12/dist-packages (from jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (7.7.1)
+Collecting jupyterlab (from jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading jupyterlab-4.4.7-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: backoff&gt;=1.10.0 in /usr/local/lib/python3.12/dist-packages (from posthog-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.2.1)
+Requirement already satisfied: distro&gt;=1.5.0 in /usr/local/lib/python3.12/dist-packages (from posthog-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.9.0)
+Requirement already satisfied: annotated-types&gt;=0.6.0 in /usr/local/lib/python3.12/dist-packages (from pydantic&gt;=2.6-&gt;bpx&lt;0.6.0,&gt;=0.5.0-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in /usr/local/lib/python3.12/dist-packages (from pydantic&gt;=2.6-&gt;bpx&lt;0.6.0,&gt;=0.5.0-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.33.2)
+Requirement already satisfied: typing-inspection&gt;=0.4.0 in /usr/local/lib/python3.12/dist-packages (from pydantic&gt;=2.6-&gt;bpx&lt;0.6.0,&gt;=0.5.0-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.4.1)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.12/dist-packages (from requests&gt;=2.19.0-&gt;pooch&gt;=1.8.1-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.4.3)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.12/dist-packages (from requests&gt;=2.19.0-&gt;pooch&gt;=1.8.1-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests&gt;=2.19.0-&gt;pooch&gt;=1.8.1-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.5.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests&gt;=2.19.0-&gt;pooch&gt;=1.8.1-&gt;pybamm&gt;=24.9-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2025.8.3)
+Requirement already satisfied: debugpy&gt;=1.0 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.8.15)
+Requirement already satisfied: ipython&gt;=7.23.1 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (7.34.0)
+Requirement already satisfied: jupyter-client&gt;=6.1.12 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (7.4.9)
+Requirement already satisfied: matplotlib-inline&gt;=0.1 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.1.7)
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.6.0)
+Requirement already satisfied: psutil in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (5.9.5)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (26.2.1)
+Requirement already satisfied: tornado&gt;=6.1 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.4.2)
+Requirement already satisfied: traitlets&gt;=5.1.0 in /usr/local/lib/python3.12/dist-packages (from ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (5.7.1)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.12/dist-packages (from ipywidgets-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.2.0)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.12/dist-packages (from ipywidgets-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.6.10)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.12/dist-packages (from ipywidgets-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.0.15)
+Requirement already satisfied: jupyter-core!=5.0.*,&gt;=4.12 in /usr/local/lib/python3.12/dist-packages (from jupyter-console-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (5.8.1)
+Requirement already satisfied: prompt-toolkit&gt;=3.0.30 in /usr/local/lib/python3.12/dist-packages (from jupyter-console-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.0.52)
+Requirement already satisfied: pygments in /usr/local/lib/python3.12/dist-packages (from jupyter-console-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.19.2)
+Collecting async-lru&gt;=1.0.0 (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: httpx&lt;1,&gt;=0.25.0 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.28.1)
+Requirement already satisfied: jinja2&gt;=3.0.3 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.1.6)
+Collecting jupyter-lsp&gt;=2.0.0 (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading jupyter_lsp-2.3.0-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: jupyter-server&lt;3,&gt;=2.4.0 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.14.0)
+Collecting jupyterlab-server&lt;3,&gt;=2.27.1 (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading jupyterlab_server-2.27.3-py3-none-any.whl.metadata (5.9 kB)
+Requirement already satisfied: notebook-shim&gt;=0.2 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.2.4)
+Requirement already satisfied: setuptools&gt;=41.1.0 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (75.2.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.13.5)
+Requirement already satisfied: bleach!=5.0.0 in /usr/local/lib/python3.12/dist-packages (from bleach[css]!=5.0.0-&gt;nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (6.2.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.3.0)
+Requirement already satisfied: markupsafe&gt;=2.0 in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.0.2)
+Requirement already satisfied: mistune&lt;4,&gt;=2.0.3 in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.1.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.10.2)
+Requirement already satisfied: nbformat&gt;=5.7 in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (5.10.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.12/dist-packages (from nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.5.1)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.12/dist-packages (from notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (25.1.0)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.12/dist-packages (from notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.8.3)
+Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.12/dist-packages (from notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.18.1)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.12/dist-packages (from notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.22.1)
+Requirement already satisfied: nbclassic&gt;=0.4.7 in /usr/local/lib/python3.12/dist-packages (from notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.3.1)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.12/dist-packages (from bleach!=5.0.0-&gt;bleach[css]!=5.0.0-&gt;nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.5.1)
+Requirement already satisfied: tinycss2&lt;1.5,&gt;=1.1.0 in /usr/local/lib/python3.12/dist-packages (from bleach[css]!=5.0.0-&gt;nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.4.0)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.10.0)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.0.9)
+Requirement already satisfied: h11&gt;=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*-&gt;httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.16.0)
+Collecting jedi&gt;=0.16 (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: decorator in /usr/local/lib/python3.12/dist-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.4.2)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.12/dist-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.7.5)
+Requirement already satisfied: backcall in /usr/local/lib/python3.12/dist-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.2.0)
+Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.12/dist-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.9.0)
+Requirement already satisfied: entrypoints in /usr/local/lib/python3.12/dist-packages (from jupyter-client&gt;=6.1.12-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.4)
+Requirement already satisfied: jupyter-events&gt;=0.9.0 in /usr/local/lib/python3.12/dist-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals&gt;=0.4.4 in /usr/local/lib/python3.12/dist-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.5.3)
+Requirement already satisfied: overrides&gt;=5.0 in /usr/local/lib/python3.12/dist-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (7.7.0)
+Requirement already satisfied: websocket-client&gt;=1.7 in /usr/local/lib/python3.12/dist-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.8.0)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.12/dist-packages (from argon2-cffi-&gt;notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (25.1.0)
+Requirement already satisfied: babel&gt;=2.10 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.17.0)
+Collecting json5&gt;=0.9.0 (from jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5)
+  Downloading json5-0.12.1-py3-none-any.whl.metadata (36 kB)
+Requirement already satisfied: jsonschema&gt;=4.18.0 in /usr/local/lib/python3.12/dist-packages (from jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (4.25.1)
+Requirement already satisfied: fastjsonschema&gt;=2.15 in /usr/local/lib/python3.12/dist-packages (from nbformat&gt;=5.7-&gt;nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.21.2)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.12/dist-packages (from prompt-toolkit&gt;=3.0.30-&gt;jupyter-console-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.2.13)
+Requirement already satisfied: ptyprocess in /usr/local/lib/python3.12/dist-packages (from terminado&gt;=0.8.3-&gt;notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.7.0)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.12/dist-packages (from beautifulsoup4-&gt;nbconvert-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.8)
+Requirement already satisfied: sniffio&gt;=1.1 in /usr/local/lib/python3.12/dist-packages (from anyio-&gt;httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.3.1)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.4 in /usr/local/lib/python3.12/dist-packages (from jedi&gt;=0.16-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.8.5)
+Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (25.3.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2025.4.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.36.2)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.27.1-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.27.1)
+Requirement already satisfied: python-json-logger&gt;=2.0.4 in /usr/local/lib/python3.12/dist-packages (from jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.3.0)
+Requirement already satisfied: rfc3339-validator in /usr/local/lib/python3.12/dist-packages (from jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.1.4)
+Requirement already satisfied: rfc3986-validator&gt;=0.1.1 in /usr/local/lib/python3.12/dist-packages (from jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (0.1.1)
+Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.12/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.17.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.12/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.22)
+Requirement already satisfied: fqdn in /usr/local/lib/python3.12/dist-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.5.1)
+Requirement already satisfied: isoduration in /usr/local/lib/python3.12/dist-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (20.11.0)
+Requirement already satisfied: jsonpointer&gt;1.13 in /usr/local/lib/python3.12/dist-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (3.0.0)
+Requirement already satisfied: rfc3987-syntax&gt;=1.1.0 in /usr/local/lib/python3.12/dist-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.1.0)
+Requirement already satisfied: uri-template in /usr/local/lib/python3.12/dist-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.3.0)
+Requirement already satisfied: webcolors&gt;=24.6.0 in /usr/local/lib/python3.12/dist-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (24.11.1)
+Requirement already satisfied: lark&gt;=1.2.2 in /usr/local/lib/python3.12/dist-packages (from rfc3987-syntax&gt;=1.1.0-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.2.2)
+Requirement already satisfied: arrow&gt;=0.15.0 in /usr/local/lib/python3.12/dist-packages (from isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (1.3.0)
+Requirement already satisfied: types-python-dateutil&gt;=2.8.10 in /usr/local/lib/python3.12/dist-packages (from arrow&gt;=0.15.0-&gt;isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.9.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab-&gt;jupyter-&gt;pybamm[all]&gt;=24.9-&gt;pybammeis==0.1.5) (2.9.0.20250822)
+Downloading pybammeis-0.1.5-py3-none-any.whl (13 kB)
+Downloading bpx-0.5.0-py3-none-any.whl (13 kB)
+Downloading pybtex-0.25.1-py2.py3-none-any.whl (127 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">127.4/127.4 kB</span> <span class=" -Color -Color-Red">7.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading scikit_fem-11.0.0-py3-none-any.whl (165 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">165.1/165.1 kB</span> <span class=" -Color -Color-Red">14.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
+Downloading latexcodec-3.0.1-py3-none-any.whl (18 kB)
+Downloading jupyterlab-4.4.7-py3-none-any.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.3/12.3 MB</span> <span class=" -Color -Color-Red">103.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+Downloading jupyter_lsp-2.3.0-py3-none-any.whl (76 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">76.7/76.7 kB</span> <span class=" -Color -Color-Red">7.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading jupyterlab_server-2.27.3-py3-none-any.whl (59 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.7/59.7 kB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">71.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading json5-0.12.1-py3-none-any.whl (36 kB)
+Installing collected packages: latexcodec, json5, jedi, async-lru, scikit-fem, pybtex, bpx, jupyterlab-server, jupyter-lsp, jupyterlab, jupyter, pybammeis
+Successfully installed async-lru-2.0.5 bpx-0.5.0 jedi-0.19.2 json5-0.12.1 jupyter-1.1.1 jupyter-lsp-2.3.0 jupyterlab-4.4.7 jupyterlab-server-2.27.3 latexcodec-3.0.1 pybammeis-0.1.5 pybtex-0.25.1 scikit-fem-11.0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>impedance
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting impedance
+  Downloading impedance-1.7.1-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: altair&gt;=3.0 in /usr/local/lib/python3.12/dist-packages (from impedance) (5.5.0)
+Requirement already satisfied: matplotlib&gt;=3.5 in /usr/local/lib/python3.12/dist-packages (from impedance) (3.10.0)
+Requirement already satisfied: numpy&gt;=1.14 in /usr/local/lib/python3.12/dist-packages (from impedance) (1.26.4)
+Requirement already satisfied: scipy&gt;=1.0 in /usr/local/lib/python3.12/dist-packages (from impedance) (1.16.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from altair&gt;=3.0-&gt;impedance) (3.1.6)
+Requirement already satisfied: jsonschema&gt;=3.0 in /usr/local/lib/python3.12/dist-packages (from altair&gt;=3.0-&gt;impedance) (4.25.1)
+Requirement already satisfied: narwhals&gt;=1.14.2 in /usr/local/lib/python3.12/dist-packages (from altair&gt;=3.0-&gt;impedance) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.12/dist-packages (from altair&gt;=3.0-&gt;impedance) (25.0)
+Requirement already satisfied: typing-extensions&gt;=4.10.0 in /usr/local/lib/python3.12/dist-packages (from altair&gt;=3.0-&gt;impedance) (4.15.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (1.3.3)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (4.59.2)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (1.4.9)
+Requirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (11.3.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (3.2.3)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib&gt;=3.5-&gt;impedance) (2.9.0.post0)
+Requirement already satisfied: attrs&gt;=22.2.0 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=3.0-&gt;altair&gt;=3.0-&gt;impedance) (25.3.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=3.0-&gt;altair&gt;=3.0-&gt;impedance) (2025.4.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=3.0-&gt;altair&gt;=3.0-&gt;impedance) (0.36.2)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /usr/local/lib/python3.12/dist-packages (from jsonschema&gt;=3.0-&gt;altair&gt;=3.0-&gt;impedance) (0.27.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3.5-&gt;impedance) (1.17.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2-&gt;altair&gt;=3.0-&gt;impedance) (3.0.2)
+Downloading impedance-1.7.1-py3-none-any.whl (48 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">48.4/48.4 kB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: impedance
+Successfully installed impedance-1.7.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">impedance.visualization</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_nyquist</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pybammeis</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;surface form&quot;</span><span class="p">:</span> <span class="s2">&quot;differential&quot;</span><span class="p">})</span>
+<span class="n">parameter_values</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+<span class="n">dfn_params</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+
+<span class="n">soc_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">x100</span><span class="p">,</span> <span class="n">y100</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">get_min_max_stoichiometries</span><span class="p">(</span>
+    <span class="n">parameter_values</span>
+<span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">InputParameter</span><span class="p">(</span><span class="s2">&quot;SOC&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+<span class="n">c_n_max</span> <span class="o">=</span> <span class="n">parameter_values</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in negative electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">c_p_max</span> <span class="o">=</span> <span class="n">parameter_values</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in positive electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">parameter_values</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Initial concentration in negative electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">c_n_max</span><span class="p">,</span>
+        <span class="s2">&quot;Initial concentration in positive electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">y</span> <span class="o">*</span> <span class="n">c_p_max</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">positive_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Positive electrode OCP [V]&quot;</span><span class="p">]</span>
+<span class="n">negative_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Negative electrode OCP [V]&quot;</span><span class="p">]</span>
+
+<span class="n">neg_sto</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">pos_sto</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+
+
+
+<span class="c1"># Create simulation</span>
+<span class="n">eis_sim</span> <span class="o">=</span> <span class="n">pybammeis</span><span class="o">.</span><span class="n">EISSimulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">parameter_values</span><span class="p">)</span>
+<span class="c1"># initial_guess = fit_params.initial_guess</span>
+<span class="n">frequencies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">80</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="c1"># plt.ylim(0.0, 0.03)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.045</span><span class="p">)</span>
+
+<span class="n">soc</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">eis_sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">frequencies</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;SOC&quot;</span><span class="p">:</span> <span class="n">soc</span><span class="p">})</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">soln</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">soln</span><span class="o">.</span><span class="n">imag</span>
+<span class="n">plot_nyquist</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">impedance.models.circuits</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomCircuit</span>
+<span class="n">circuit_defn</span> <span class="o">=</span> <span class="s2">&quot;R0-p(R1,C1)&quot;</span>
+
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">CustomCircuit</span><span class="p">(</span><span class="n">circuit_defn</span><span class="p">,</span> <span class="n">initial_guess</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">])</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">frequencies</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">weight_by_modulus</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">z_fit</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span>
+<span class="n">plot_nyquist</span><span class="p">(</span><span class="n">z_fit</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circuit</span><span class="o">.</span><span class="n">parameters_</span><span class="p">)</span>
+<span class="n">R0</span><span class="p">,</span> <span class="n">R1</span><span class="p">,</span> <span class="n">C1</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">parameters_</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.015</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$R_</span><span class="si">{int}</span><span class="s2">$ 1e-2&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.013</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$R_</span><span class="si">{ct}</span><span class="s2">$ 3.8e-2&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.011</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$C_</span><span class="si">{dl}</span><span class="s2">$ 4.1e-1&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># ax.text(0.022, 0.027, r&quot;$Zo$ 2.9e-2&quot;, va=&quot;center&quot;, fontsize=12)</span>
+<span class="c1"># ax.text(0.022, 0.025, r&quot;$\tau$ 1.54e-3&quot;, va=&quot;center&quot;, fontsize=12)</span>
+
+
+<span class="c1"># plt.legend([&quot;EIS&quot;])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;eis.pdf&quot;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;eis.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.00105143 0.03806194 0.40541924]
+</pre></div>
+</div>
+<script type="application/javascript">
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  </script><script type="application/javascript">download("download_00106d13-06fc-422e-abf5-f37bf53fc5b7", "eis.pdf", 20172)</script><img alt="_images/a566e9844c016ed9df6c156f0dcbfc93ac5ff669aeba75d33bbf6c325cb0d50d.png" src="_images/a566e9844c016ed9df6c156f0dcbfc93ac5ff669aeba75d33bbf6c325cb0d50d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;surface form&quot;</span><span class="p">:</span> <span class="s2">&quot;differential&quot;</span><span class="p">})</span>
+<span class="n">parameter_values</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">ParameterValues</span><span class="p">(</span><span class="s2">&quot;Prada2013&quot;</span><span class="p">)</span>
+
+<span class="n">soc_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">x100</span><span class="p">,</span> <span class="n">y100</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">get_min_max_stoichiometries</span><span class="p">(</span>
+    <span class="n">parameter_values</span>
+<span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">InputParameter</span><span class="p">(</span><span class="s2">&quot;SOC&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+<span class="n">c_n_max</span> <span class="o">=</span> <span class="n">parameter_values</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in negative electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">c_p_max</span> <span class="o">=</span> <span class="n">parameter_values</span><span class="p">[</span>
+    <span class="s2">&quot;Maximum concentration in positive electrode [mol.m-3]&quot;</span>
+<span class="p">]</span>
+<span class="n">parameter_values</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Initial concentration in negative electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">c_n_max</span><span class="p">,</span>
+        <span class="s2">&quot;Initial concentration in positive electrode [mol.m-3]&quot;</span><span class="p">:</span> <span class="n">y</span> <span class="o">*</span> <span class="n">c_p_max</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">positive_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Positive electrode OCP [V]&quot;</span><span class="p">]</span>
+<span class="n">negative_ocp</span> <span class="o">=</span> <span class="n">dfn_params</span><span class="p">[</span><span class="s2">&quot;Negative electrode OCP [V]&quot;</span><span class="p">]</span>
+
+<span class="n">neg_sto</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">x100</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span>
+<span class="n">pos_sto</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">soc_range</span> <span class="o">*</span> <span class="p">(</span><span class="n">y0</span> <span class="o">-</span> <span class="n">y100</span><span class="p">)</span>
+
+
+
+<span class="c1"># Create simulation</span>
+<span class="n">eis_sim</span> <span class="o">=</span> <span class="n">pybammeis</span><span class="o">.</span><span class="n">EISSimulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">parameter_values</span><span class="p">)</span>
+<span class="c1"># initial_guess = fit_params.initial_guess</span>
+<span class="n">frequencies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span>
+    <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">80</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="c1"># plt.ylim(0.0, 0.03)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">soc</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">eis_sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">frequencies</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;SOC&quot;</span><span class="p">:</span> <span class="n">soc</span><span class="p">})</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">soln</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">soln</span><span class="o">.</span><span class="n">imag</span>
+<span class="n">plot_nyquist</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">impedance.models.circuits</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomCircuit</span>
+<span class="n">circuit_defn</span> <span class="o">=</span> <span class="s2">&quot;R0-p(R1,C1)-W&quot;</span>
+
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">CustomCircuit</span><span class="p">(</span><span class="n">circuit_defn</span><span class="p">,</span> <span class="n">initial_guess</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">])</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">frequencies</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">weight_by_modulus</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">z_fit</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span>
+<span class="n">plot_nyquist</span><span class="p">(</span><span class="n">z_fit</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circuit</span><span class="o">.</span><span class="n">parameters_</span><span class="p">)</span>
+<span class="n">R0</span><span class="p">,</span> <span class="n">R1</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="n">Wo</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">parameters_</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.027</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$R_</span><span class="si">{int}</span><span class="s2">$ 1.4e-3&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.025</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$R_</span><span class="si">{ct}</span><span class="s2">$ 3.75e-2&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.023</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$C_</span><span class="si">{dl}</span><span class="s2">$ 4.07e-1&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># ax.text(0.022, 0.027, r&quot;$Zo$ 2.9e-2&quot;, va=&quot;center&quot;, fontsize=12)</span>
+<span class="c1"># ax.text(0.022, 0.025, r&quot;$\tau$ 1.54e-3&quot;, va=&quot;center&quot;, fontsize=12)</span>
+
+
+<span class="c1"># plt.legend([&quot;EIS&quot;])</span>
+
+<span class="c1"># plt.savefig(&quot;eis.pdf&quot;)</span>
+
+<span class="c1"># from google.colab import files</span>
+<span class="c1"># files.download(&quot;eis.pdf&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.23004375e-03 2.00027275e-03 1.00000000e+05 1.35588602e-03]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.01, 0.023, &#39;$C_{dl}$ 4.07e-1&#39;)
+</pre></div>
+</div>
+<img alt="_images/638b3d1e1c63616f8cb61a4e180f8c4ed118c877248bace1ea819670b57de887.png" src="_images/638b3d1e1c63616f8cb61a4e180f8c4ed118c877248bace1ea819670b57de887.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Galvanostatic discharge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiostatic-discharge">Potentiostatic discharge</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pulse">Pulse</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ocv-gitt">OCV (GITT)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hppc">HPPC</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#warburg-impedance-cpe">Warburg impedance (CPE)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eis">EIS</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amal Sebastian
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
