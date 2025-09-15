@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Maxwell construction and Common tangent construction &#8212; Electrochemical Energy Storage Systems</title>
+    <title>M2.1 - Maxwell and common tangent construction &#8212; Electrochemical Energy Storage Systems</title>
   
   
   
@@ -180,7 +180,7 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="testing.html">M1.3 - Electrochemical Testing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Maxwell construction and Common tangent construction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">M2.1 - Maxwell and common tangent construction</a></li>
 
 
 </ul>
@@ -321,7 +321,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Maxwell construction and Common tangent construction</h1>
+    <h1>M2.1 - Maxwell and common tangent construction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -331,7 +331,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Maxwell construction and Common tangent construction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">M2.1 - Maxwell and common tangent construction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-construction">Maxwell construction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#common-tangent-construction">Common tangent construction</a></li>
 </ul>
@@ -346,8 +346,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="maxwell-construction-and-common-tangent-construction">
-<h1>Maxwell construction and Common tangent construction<a class="headerlink" href="#maxwell-construction-and-common-tangent-construction" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="m2-1-maxwell-and-common-tangent-construction">
+<h1>M2.1 - Maxwell and common tangent construction<a class="headerlink" href="#m2-1-maxwell-and-common-tangent-construction" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -422,7 +422,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">vdw_maxwell</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">vdw_maxwell</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">,</span> <span class="n">print_info</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="n">pr</span> <span class="o">=</span> <span class="n">vdw</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span>
     <span class="n">iprmin</span> <span class="o">=</span> <span class="n">argrelextrema</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">less</span><span class="p">)</span>
     <span class="n">iprmax</span> <span class="o">=</span> <span class="n">argrelextrema</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">greater</span><span class="p">)</span>
@@ -434,20 +434,21 @@ document.write(`
     <span class="n">pr0</span> <span class="o">=</span> <span class="n">vdw</span><span class="p">(</span><span class="n">Vr0</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span>
     <span class="n">Vrmin</span><span class="p">,</span> <span class="n">mid</span> <span class="p">,</span><span class="n">Vrmax</span> <span class="o">=</span> <span class="n">get_Vlims</span><span class="p">(</span><span class="n">pr0</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span>
         
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phase coexistence region : (</span><span class="si">{</span><span class="n">Vrmin</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">Vrmax</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phase coexistence pressure: </span><span class="si">{</span><span class="n">pr0</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
 
     <span class="n">area1</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">vr</span><span class="p">:</span> <span class="n">vdw</span><span class="p">(</span><span class="n">vr</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span> <span class="o">-</span> <span class="n">pr0</span><span class="p">,</span> <span class="n">Vrmin</span><span class="p">,</span> <span class="n">mid</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">area2</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">vr</span><span class="p">:</span> <span class="n">vdw</span><span class="p">(</span><span class="n">vr</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span> <span class="o">-</span> <span class="n">pr0</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">Vrmax</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area of region 1: </span><span class="si">{</span><span class="n">area1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area of region 2: </span><span class="si">{</span><span class="n">area2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">print_info</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phase coexistence region : (</span><span class="si">{</span><span class="n">Vrmin</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">Vrmax</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phase coexistence pressure: </span><span class="si">{</span><span class="n">pr0</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area of region 1: </span><span class="si">{</span><span class="n">area1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area of region 2: </span><span class="si">{</span><span class="n">area2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="c1"># Set the pressure in the Maxwell construction region to constant pr0.</span>
     <span class="n">pr</span><span class="p">[(</span><span class="n">V</span> <span class="o">&gt;=</span> <span class="n">Vrmin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">V</span> <span class="o">&lt;=</span> <span class="n">Vrmax</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pr0</span>
     
-    <span class="k">return</span> <span class="n">pr</span>
+    <span class="k">return</span> <span class="n">pr</span><span class="p">,</span> <span class="n">Vrmin</span><span class="p">,</span> <span class="n">Vrmax</span><span class="p">,</span> <span class="n">pr0</span>
 </pre></div>
 </div>
 </div>
@@ -459,7 +460,7 @@ document.write(`
 
 <span class="k">def</span><span class="w"> </span><span class="nf">plot_pV</span><span class="p">(</span><span class="n">a_tilda</span><span class="p">):</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw_maxwell</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw_maxwell</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde v$&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde p$&quot;</span><span class="p">)</span>
 
@@ -491,47 +492,36 @@ Area of region 2: 0.01714781848451615
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">plot_pV</span><span class="p">(</span><span class="n">a_tilda</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;a = </span><span class="si">{</span><span class="n">a_tilda</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw_maxwell</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw_maxwell</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">,</span> <span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;a = </span><span class="si">{</span><span class="n">a_tilda</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde v$&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde p$&quot;</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">))</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">stable_lims</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
 <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">a_tilda</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mf">3.527</span><span class="p">,</span> <span class="mf">3.679</span><span class="p">,</span> <span class="mf">3.831</span><span class="p">,</span> <span class="mf">3.982</span><span class="p">]):</span>
     <span class="n">plot_pV</span><span class="p">(</span><span class="n">a_tilda</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
 
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">a_tilda</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">3.376</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="n">N</span><span class="o">//</span><span class="mi">2</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">Vmin</span><span class="p">,</span> <span class="n">Vmax</span><span class="p">,</span> <span class="n">pr0</span> <span class="o">=</span> <span class="n">vdw_maxwell</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">,</span> <span class="n">print_info</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">stable_lims</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Vmin</span><span class="p">,</span> <span class="n">pr0</span><span class="p">]</span>
+    <span class="n">stable_lims</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="n">idx</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Vmax</span><span class="p">,</span> <span class="n">pr0</span><span class="p">]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">vdw</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="mf">3.375</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;a = 3.375&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stable_lims</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">stable_lims</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Vapor dome&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 3.527
-Phase coexistence region : (2.1008059019298133, 4.942308278556055)
-Phase coexistence pressure: 0.10926561271231283
-Area of region 1: -0.004420736385362768
-Area of region 2: 0.004420736385362581
-a = 3.679
-Phase coexistence region : (1.8791300640513313, 6.360407637907907)
-Phase coexistence pressure: 0.09561194266038814
-Area of region 1: -0.01714781848451622
-Area of region 2: 0.01714781848451615
-a = 3.831
-Phase coexistence region : (1.746184765542484, 7.86407182426128)
-Phase coexistence pressure: 0.0837395590972263
-Area of region 1: -0.03745317375738382
-Area of region 2: 0.037453173757407116
-a = 3.982
-Phase coexistence region : (1.654052755077932, 9.5140925564273)
-Phase coexistence pressure: 0.07346105781821632
-Area of region 1: -0.06449460106472638
-Area of region 2: 0.06449460106472679
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.0, 10.0)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 0.2)
-</pre></div>
-</div>
-<img alt="_images/8be1fd81fbe0c73f5e1200b65af12f2b277622e3e19c37610f585d54941d9b43.png" src="_images/8be1fd81fbe0c73f5e1200b65af12f2b277622e3e19c37610f585d54941d9b43.png" />
+<img alt="_images/9c6147e682a2356de37b6e6a7caa94b0e7133f775635c963244b405a767b409b.png" src="_images/9c6147e682a2356de37b6e6a7caa94b0e7133f775635c963244b405a767b409b.png" />
 </div>
 </div>
 </section>
@@ -635,7 +625,7 @@ Phase coexistence pressure: 0.09561194266038786
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">helmholtz</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;a = </span><span class="si">{</span><span class="n">a_tilda</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">common_tangent</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">a_tilda</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde v$&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde p$&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tilde f$&quot;</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">a_tilda</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mf">3.527</span><span class="p">,</span> <span class="mf">3.679</span><span class="p">,</span> <span class="mf">3.831</span><span class="p">,</span> <span class="mf">3.982</span><span class="p">]):</span>
@@ -662,10 +652,10 @@ Phase coexistence region : (1.6540527550777144, 9.514092556372615)
 Phase coexistence pressure: 0.07346105781834189
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x157a634d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x16e31bc50&gt;
 </pre></div>
 </div>
-<img alt="_images/10ba34552a71ca1ef7f706b235a6ca8eb22c3d1dd64f37ba40a583e5e332dfb6.png" src="_images/10ba34552a71ca1ef7f706b235a6ca8eb22c3d1dd64f37ba40a583e5e332dfb6.png" />
+<img alt="_images/3f8f0af23e56b6ce7463678011be04c3468e2865916d33cde18d3009152de815.png" src="_images/3f8f0af23e56b6ce7463678011be04c3468e2865916d33cde18d3009152de815.png" />
 </div>
 </div>
 </section>
@@ -725,7 +715,7 @@ Phase coexistence pressure: 0.07346105781834189
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Maxwell construction and Common tangent construction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">M2.1 - Maxwell and common tangent construction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-construction">Maxwell construction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#common-tangent-construction">Common tangent construction</a></li>
 </ul>
