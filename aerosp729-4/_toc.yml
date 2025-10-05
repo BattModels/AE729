@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: testing
-- file: phase_coex
-# - file: notebooks
-# - file: markdown-notebooks
+- file: testing.md
+- file: phase_coex.md
+- file: hw/HW1_soln.ipynb
+- file: hw/hw2.ipynb

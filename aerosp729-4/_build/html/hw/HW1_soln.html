@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>HW1 Solutions &#8212; Electrochemical Energy Storage Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hw/HW1_soln';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="M2.1 - Maxwell and common tangent construction" href="../phase_coex.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Electrochemical Energy Storage Systems - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Electrochemical Energy Storage Systems - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Electrochemical Energy Storage Systems
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">M1.3 - Electrochemical Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phase_coex.html">M2.1 - Maxwell and common tangent construction</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">HW1 Solutions</a></li>
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/hw/HW1_soln.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>HW1 Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">HW1 Solutions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anode-oxidation-reaction">Anode (oxidation reaction)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cathode-reduction-reaction">Cathode (reduction reaction)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit-internal-resistor-model">Equivalent Circuit: Internal Resistor Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit-resistor-capacitor-rc-model">Equivalent Circuit: Resistor-Capacitor (RC) Model</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="hw1-solutions">
+<h1>HW1 Solutions<a class="headerlink" href="#hw1-solutions" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">niceplots</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">niceplots</span><span class="o">.</span><span class="n">get_style</span><span class="p">())</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">niceplots</span><span class="o">.</span><span class="n">get_colors_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">OCV</span><span class="p">(</span><span class="n">Q</span> <span class="p">,</span> <span class="n">Q_max</span><span class="o">=</span><span class="mf">5.080457832540185</span><span class="p">):</span>
+    <span class="n">coeffs</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.44934919</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.07263436</span><span class="p">,</span>  <span class="mf">0.03009002</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02263346</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.24777699</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.26923143</span><span class="p">,</span> <span class="mf">3.72029854</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">Q</span> <span class="o">/</span> <span class="n">Q_max</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="p">(</span><span class="n">coeffs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">))</span>  <span class="c1"># Higher-order terms</span>
+
+    <span class="n">result</span> <span class="o">+=</span> <span class="n">coeffs</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mf">8.3145</span> <span class="o">*</span> <span class="mf">298.15</span> <span class="o">/</span> <span class="mf">96485.3321</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="question-1">
+<h1>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h1>
+<section id="anode-oxidation-reaction">
+<h2>Anode (oxidation reaction)<a class="headerlink" href="#anode-oxidation-reaction" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+  \mathrm{Li_{x}C_{6} \rightleftharpoons xLi^{+} + xe^{-} + C_6}
+\end{equation*}
+\]</div>
+</section>
+<section id="cathode-reduction-reaction">
+<h2>Cathode (reduction reaction)<a class="headerlink" href="#cathode-reduction-reaction" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+\mathrm{Li_{1-x}Ni_{0.8}Mn_{0.1}Co_{0.1}O_{2} + xLi^{+} + xe^{-} \rightleftharpoons LiNi_{0.8}Mn_{0.1}Co_{0.1}O_{2}}
+\end{equation*}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./LGM50_0_5A.csv&quot;</span><span class="p">)</span>
+<span class="n">capacity_01C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;capacity_Ah&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">voltage_01C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;voltage_V&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./LGM50_2_5A.csv&quot;</span><span class="p">)</span>
+<span class="n">capacity_05C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;capacity_Ah&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">voltage_05C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;voltage_V&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./LGM50_5_0A.csv&quot;</span><span class="p">)</span>
+<span class="n">capacity_1C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;capacity_Ah&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">voltage_1C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;voltage_V&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">capacities</span> <span class="o">=</span> <span class="p">[</span><span class="n">capacity_01C</span><span class="p">,</span> <span class="n">capacity_05C</span><span class="p">,</span> <span class="n">capacity_1C</span><span class="p">]</span>
+<span class="n">measured_voltages</span> <span class="o">=</span> <span class="p">[</span><span class="n">voltage_01C</span><span class="p">,</span> <span class="n">voltage_05C</span><span class="p">,</span> <span class="n">voltage_1C</span><span class="p">]</span>
+<span class="n">currents</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="question-2">
+<h1>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="n">capacity_01C</span> <span class="o">/</span> <span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duration of discharge: </span><span class="si">{</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> hours&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Delivered capacity: </span><span class="si">{</span><span class="n">capacity_01C</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> Ah&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage_01C</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Duration of discharge: 10.16091566508037 hours
+Delivered capacity: 5.080457832540185 Ah
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Time [s]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/396de4308a6ef8ab07ea3aa8ae9d3354b0ca876375f73f160f7a056a8d2e092f.png" src="../_images/396de4308a6ef8ab07ea3aa8ae9d3354b0ca876375f73f160f7a056a8d2e092f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">integrate</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average voltage [V]: &quot;</span><span class="p">,</span> <span class="n">integrate</span><span class="o">.</span><span class="n">simpson</span><span class="p">(</span><span class="n">voltage_01C</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Delivered energy [Wh]: &quot;</span><span class="p">,</span> <span class="n">integrate</span><span class="o">.</span><span class="n">simpson</span><span class="p">(</span><span class="n">voltage_01C</span><span class="p">,</span> <span class="n">capacity_01C</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Delivered energy [J]: &quot;</span><span class="p">,</span> <span class="mi">3600</span> <span class="o">*</span> <span class="n">integrate</span><span class="o">.</span><span class="n">simpson</span><span class="p">(</span><span class="n">voltage_01C</span><span class="p">,</span> <span class="n">capacity_01C</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average voltage [V]:  3.687614797045349
+Delivered energy [Wh]:  18.734771479040127
+Delivered energy [J]:  67445.17732454446
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="question-3">
+<h1>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="equivalent-circuit-internal-resistor-model">
+<h1>Equivalent Circuit: Internal Resistor Model<a class="headerlink" href="#equivalent-circuit-internal-resistor-model" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C_rates</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="c1"># fig, ax = plt.subplots(1, 3, figsize=(12, 4))</span>
+
+<span class="n">avg_res_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c_idx</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">currents</span><span class="p">,</span> <span class="n">capacities</span><span class="p">,</span> <span class="n">measured_voltages</span><span class="p">)):</span>
+    <span class="n">current</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">voltage</span> <span class="o">=</span> <span class="n">data</span>
+    
+    <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">voltage</span> <span class="o">=</span> <span class="n">voltage</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">v_loss</span> <span class="o">=</span> <span class="n">OCV</span><span class="p">(</span><span class="n">capacity</span><span class="p">)</span> <span class="o">-</span> <span class="n">voltage</span>
+    
+    <span class="n">resistance</span> <span class="o">=</span> <span class="n">v_loss</span> <span class="o">/</span> <span class="n">current</span>
+    <span class="n">average_resistance</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">simpson</span><span class="p">(</span><span class="n">resistance</span><span class="p">,</span> <span class="n">capacity</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">capacity</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">capacity</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average resistance value for </span><span class="si">{</span><span class="n">current</span><span class="si">}</span><span class="s2"> A case: </span><span class="si">{</span><span class="n">average_resistance</span><span class="si">}</span><span class="s2"> Ohms&quot;</span><span class="p">)</span>
+
+    <span class="n">avg_res_list</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">average_resistance</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">v_loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current</span><span class="si">}</span><span class="s2"> A&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Capacity&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Overpotential [V]&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average resistance value for 0.5 A case: 0.0654789300373813 Ohms
+Average resistance value for 2.5 A case: 0.05414591127481907 Ohms
+Average resistance value for 5.0 A case: 0.049304265804356796 Ohms
+</pre></div>
+</div>
+<img alt="../_images/6b0c7f015b8e967a4eadd1ea1880612b117590cb48a3da478eccf5a5e69174b9.png" src="../_images/6b0c7f015b8e967a4eadd1ea1880612b117590cb48a3da478eccf5a5e69174b9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">c_idx</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">currents</span><span class="p">,</span> <span class="n">capacities</span><span class="p">,</span> <span class="n">measured_voltages</span><span class="p">)):</span>
+    <span class="n">current</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">voltage</span> <span class="o">=</span> <span class="n">data</span>
+    
+    <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">voltage</span> <span class="o">=</span> <span class="n">voltage</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">v_model</span> <span class="o">=</span> <span class="n">OCV</span><span class="p">(</span><span class="n">capacity</span><span class="p">)</span> <span class="o">-</span> <span class="n">current</span> <span class="o">*</span> <span class="n">avg_res_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">MAE</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">voltage</span> <span class="o">-</span> <span class="n">v_model</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAE for </span><span class="si">{</span><span class="n">current</span><span class="si">}</span><span class="s2"> A case: </span><span class="si">{</span><span class="n">MAE</span><span class="si">}</span><span class="s2"> V&quot;</span><span class="p">)</span>
+    
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Measured&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">v_model</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Model&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Capacity&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Overpotential [V]&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current</span><span class="si">}</span><span class="s2"> A&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAE for 0.5 A case: 0.019285437524195908 V
+MAE for 2.5 A case: 0.015017722752430362 V
+MAE for 5.0 A case: 0.04140119979861659 V
+</pre></div>
+</div>
+<img alt="../_images/2d6b7573ce8d53a0595b880f1ec636839a8af191ab7360e50b341406835db067.png" src="../_images/2d6b7573ce8d53a0595b880f1ec636839a8af191ab7360e50b341406835db067.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="equivalent-circuit-resistor-capacitor-rc-model">
+<h1>Equivalent Circuit: Resistor-Capacitor (RC) Model<a class="headerlink" href="#equivalent-circuit-resistor-capacitor-rc-model" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pulse.csv&quot;</span><span class="p">)</span>
+<span class="n">time_pulse</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;time_s&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">voltage_pulse</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;voltage_V&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">current_pulse</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;current_A&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_pulse</span><span class="p">,</span> <span class="n">current_pulse</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_pulse</span><span class="p">,</span> <span class="n">voltage_pulse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x120335590&gt;]
+</pre></div>
+</div>
+<img alt="../_images/a80790eb12a4f71ec7597f60d1d8141d7c700d494fd5091a4648d285c9c15ec1.png" src="../_images/a80790eb12a4f71ec7597f60d1d8141d7c700d494fd5091a4648d285c9c15ec1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">current_pulse</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_min</span> <span class="o">=</span> <span class="n">voltage_pulse</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Rint</span> <span class="o">=</span> <span class="p">(</span><span class="n">voltage_pulse</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">-</span> <span class="n">V_min</span><span class="p">)</span> <span class="o">/</span> <span class="n">current_pulse</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of R_int is </span><span class="si">{</span><span class="n">Rint</span><span class="si">}</span><span class="s2"> Ohms&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The value of R_int is 0.03444164027155274 Ohms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q_discharge</span> <span class="o">=</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="mi">30</span> <span class="o">/</span> <span class="mi">3600</span> <span class="c1"># Ah</span>
+<span class="n">Rct</span> <span class="o">=</span> <span class="p">((</span><span class="n">OCV</span><span class="p">(</span><span class="n">Q_discharge</span><span class="p">)</span> <span class="o">-</span> <span class="n">V_min</span><span class="p">)</span> <span class="o">/</span> <span class="n">current_pulse</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="n">Rint</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of Rct is </span><span class="si">{</span><span class="n">Rct</span><span class="si">}</span><span class="s2"> Ohms&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The value of Rct is 0.014032913997908382 Ohms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">voltage_shift</span> <span class="o">=</span> <span class="n">voltage_pulse</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">-</span> <span class="n">voltage_pulse</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">time_shift</span> <span class="o">=</span> <span class="n">time_pulse</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_pulse</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+<span class="n">voltage_normalized</span> <span class="o">=</span> <span class="n">voltage_shift</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.5</span> <span class="o">*</span> <span class="n">Rct</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_shift</span><span class="p">,</span> <span class="n">voltage_normalized</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1202187d0&gt;]
+</pre></div>
+</div>
+<img alt="../_images/6c6ec8798fb3c6b228fef43858404611b368f3ac6301c0e738cebc78b1c4b4e9.png" src="../_images/6c6ec8798fb3c6b228fef43858404611b368f3ac6301c0e738cebc78b1c4b4e9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">voltage_normalized</span> <span class="o">&gt;</span> <span class="mf">0.632</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">voltage_normalized</span><span class="p">[</span><span class="n">tau_idx</span><span class="p">],</span> <span class="n">voltage_normalized</span><span class="p">[</span><span class="n">tau_idx</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6654606884913614 0.6319929452235284
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">time_shift</span><span class="p">[</span><span class="n">tau_idx</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Cdl</span> <span class="o">=</span> <span class="n">tau</span> <span class="o">/</span> <span class="n">Rct</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The time constant is </span><span class="si">{</span><span class="n">tau</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The double layer capacitance is </span><span class="si">{</span><span class="n">Cdl</span><span class="si">}</span><span class="s2"> F&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The time constant is 29.348403627191605 s
+The double layer capacitance is 2091.397669191588 F
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">c_idx</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">currents</span><span class="p">,</span> <span class="n">capacities</span><span class="p">,</span> <span class="n">measured_voltages</span><span class="p">)):</span>
+    <span class="n">current</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">voltage</span> <span class="o">=</span> <span class="n">data</span>
+    
+    <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">voltage</span> <span class="o">=</span> <span class="n">voltage</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">time</span> <span class="o">=</span> <span class="n">capacity</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">/</span> <span class="n">current</span>
+    <span class="n">v_model</span> <span class="o">=</span> <span class="n">OCV</span><span class="p">(</span><span class="n">capacity</span><span class="p">)</span> <span class="o">-</span> <span class="n">current</span> <span class="o">*</span> <span class="n">Rint</span> <span class="o">-</span> <span class="n">current</span> <span class="o">*</span> <span class="n">Rct</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">time</span><span class="o">/</span><span class="n">tau</span><span class="p">))</span>
+
+    <span class="n">MAE</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">voltage</span> <span class="o">-</span> <span class="n">v_model</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAE for </span><span class="si">{</span><span class="n">current</span><span class="si">}</span><span class="s2"> A case: </span><span class="si">{</span><span class="n">MAE</span><span class="si">}</span><span class="s2"> V&quot;</span><span class="p">)</span>
+    
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Measured&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">v_model</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Model&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Capacity&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Overpotential [V]&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current</span><span class="si">}</span><span class="s2"> A&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">c_idx</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAE for 0.5 A case: 0.02166419522854344 V
+MAE for 2.5 A case: 0.026942833865080073 V
+MAE for 5.0 A case: 0.02711858165274 V
+</pre></div>
+</div>
+<img alt="../_images/e4380819a72a178af0c0418beb162c78b6c1ce89e00bb7e263decf48273820f1.png" src="../_images/e4380819a72a178af0c0418beb162c78b6c1ce89e00bb7e263decf48273820f1.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./hw"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../phase_coex.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">M2.1 - Maxwell and common tangent construction</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">HW1 Solutions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anode-oxidation-reaction">Anode (oxidation reaction)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cathode-reduction-reaction">Cathode (reduction reaction)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit-internal-resistor-model">Equivalent Circuit: Internal Resistor Model</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit-resistor-capacitor-rc-model">Equivalent Circuit: Resistor-Capacitor (RC) Model</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amal Sebastian
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
