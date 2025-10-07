@@ -4,7 +4,8 @@
 format: jb-book
 root: intro
 chapters:
-- file: testing.md
-- file: phase_coex.md
-- file: hw/HW1_soln.ipynb
-- file: hw/hw2.ipynb
+  - file: testing.md
+  - file: phase_coex.md
+  - file: hw/HW1_soln.ipynb
+  - file: hw/hw2.ipynb
+  - file: hw/hw3.ipynb
