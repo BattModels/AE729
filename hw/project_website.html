@@ -1,0 +1,1209 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project Solutions &#8212; Electrochemical Energy Storage Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hw/project_website';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Midterm Solutions" href="../exams/midterm_soln.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Electrochemical Energy Storage Systems - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Electrochemical Energy Storage Systems - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Electrochemical Energy Storage Systems
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">M1.3 - Electrochemical Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../phase_coex.html">M2.1 - Maxwell and common tangent construction</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="HW1_soln.html">HW1 Solutions</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="hw2.html">HW2 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw3.html">HW3 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw4.html">HW4 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exams/midterm_soln.html">Midterm Solutions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Solutions</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/hw/project_website.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project Solutions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-7-8">Question 6, 7, 8</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-f03">Figure F03</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lg-m50">LG-M50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molicel-p45b">Molicel P45B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skydio-x10">Skydio X10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">LG-M50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Molicel P45B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyka-pelican">Pyka - Pelican</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">LG-M50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Molicel P45B</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-solutions">
+<h1>Project Solutions<a class="headerlink" href="#project-solutions" title="Link to this heading">#</a></h1>
+<p>The following sections contain solutions to a subset of the questions that was given in the project</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pybamm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="question-6-7-8">
+<h1>Question 6, 7, 8<a class="headerlink" href="#question-6-7-8" title="Link to this heading">#</a></h1>
+<section id="figure-f03">
+<h2>Figure F03<a class="headerlink" href="#figure-f03" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mf">60.01</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mf">135.01</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mf">150.01</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mf">155.01</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mf">165.01</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mf">240.01</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+<span class="n">power_req</span> <span class="o">=</span> <span class="p">[</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">825</span><span class="p">,</span> <span class="mi">825</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">577</span><span class="p">,</span> <span class="mi">577</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">1013</span><span class="p">,</span> <span class="mi">1013</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">450</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_req</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Power [W]&quot;</span><span class="p">)</span>
+
+<span class="n">energy_J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">power_req</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+<span class="n">energy_kWh</span> <span class="o">=</span> <span class="n">energy_J</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/vm/pqk04tfx5xz4k8hgkz8zw4dw0000gn/T/ipykernel_20633/4092557049.py:7: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  energy_J = np.trapz(power_req, time)
+</pre></div>
+</div>
+<img alt="../_images/72be5c4a9e34b5758dc48c53082b2428637a73c425bf2524477ad250ae29e890.png" src="../_images/72be5c4a9e34b5758dc48c53082b2428637a73c425bf2524477ad250ae29e890.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_repeated_cycle</span><span class="p">(</span><span class="n">base_time</span><span class="p">,</span> <span class="n">base_power</span><span class="p">,</span> <span class="n">total_duration_hours</span><span class="p">):</span>    
+    <span class="n">total_duration_seconds</span> <span class="o">=</span> <span class="n">total_duration_hours</span> <span class="o">*</span> <span class="mi">3600</span>
+    <span class="n">cycle_duration</span> <span class="o">=</span> <span class="n">base_time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="n">full_time_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">full_power_list</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="n">cycle_start_time</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="n">cycle_start_time</span> <span class="o">&lt;</span> <span class="n">total_duration_seconds</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">base_time</span><span class="p">)):</span>
+            <span class="n">absolute_time</span> <span class="o">=</span> <span class="n">cycle_start_time</span> <span class="o">+</span> <span class="n">base_time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">absolute_time</span> <span class="o">&gt;</span> <span class="n">total_duration_seconds</span><span class="p">:</span>
+                <span class="k">break</span>
+                
+            <span class="n">full_time_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">absolute_time</span><span class="p">)</span>
+            <span class="n">full_power_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base_power</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            
+        <span class="n">cycle_start_time</span> <span class="o">+=</span> <span class="n">cycle_duration</span>
+
+    <span class="k">if</span> <span class="n">full_time_list</span> <span class="ow">and</span> <span class="n">full_time_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">total_duration_seconds</span><span class="p">:</span>
+        <span class="n">full_time_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total_duration_seconds</span><span class="p">)</span>
+        <span class="n">full_power_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">full_power_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">full_time_list</span><span class="p">,</span> <span class="n">full_power_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_cycle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mf">60.01</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mf">135.01</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mf">150.01</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mf">155.01</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mf">165.01</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mf">240.01</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+<span class="n">power_cycle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">825</span><span class="p">,</span> <span class="mi">825</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">577</span><span class="p">,</span> <span class="mi">577</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">1013</span><span class="p">,</span> <span class="mi">1013</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">450</span><span class="p">]</span>
+
+<span class="c1"># Run the logic</span>
+<span class="n">target_hours</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="n">extended_time</span><span class="p">,</span> <span class="n">extended_power</span> <span class="o">=</span> <span class="n">generate_repeated_cycle</span><span class="p">(</span><span class="n">time_cycle</span><span class="p">,</span> <span class="n">power_cycle</span><span class="p">,</span> <span class="n">target_hours</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy_J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">extended_power</span><span class="p">,</span> <span class="n">extended_time</span><span class="p">)</span>
+<span class="n">energy_kWh</span> <span class="o">=</span> <span class="n">energy_J</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total energy required (kWh): &quot;</span><span class="p">,</span> <span class="n">energy_kWh</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total energy required (kWh):  2.3383578125
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/vm/pqk04tfx5xz4k8hgkz8zw4dw0000gn/T/ipykernel_20633/3001644367.py:1: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  energy_J = np.trapz(extended_power, extended_time)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molicel_power_capacity</span> <span class="o">=</span> <span class="mf">16.2</span> <span class="c1">#spec sheet Wh</span>
+<span class="n">molicel_peak_power</span> <span class="o">=</span> <span class="mi">130</span> <span class="c1"># 180 - 90% SOC - 10s, this is estimate of continuous</span>
+
+<span class="n">LG_power_capacity</span> <span class="o">=</span> <span class="mf">18.2</span> <span class="c1">#spec sheet - Wh</span>
+<span class="n">LG_peak_power</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1"># pulse - 80 W - 10s, this is estimate of continuous</span>
+
+<span class="n">n_cells_moli</span> <span class="o">=</span> <span class="n">energy_kWh</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">molicel_power_capacity</span>
+<span class="n">n_cells_power_moli</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">extended_power</span><span class="p">)</span><span class="o">/</span> <span class="n">molicel_peak_power</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Molicel P45B </span><span class="se">\n</span><span class="s2"> Energy limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_moli</span><span class="p">)</span><span class="si">}</span><span class="s2">, Power limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_moli</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">n_cells_lg</span> <span class="o">=</span> <span class="n">energy_kWh</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">LG_power_capacity</span>
+<span class="n">n_cells_power_lg</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">extended_power</span><span class="p">)</span><span class="o">/</span><span class="n">LG_peak_power</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LG-M50 </span><span class="se">\n</span><span class="s2"> Energy limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_lg</span><span class="p">)</span><span class="si">}</span><span class="s2">, Power limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_lg</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molicel P45B 
+ Energy limited case: 145.0, Power limited case: 8.0
+LG-M50 
+ Energy limited case: 129.0, Power limited case: 26.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thus we see that for the humanoid robot case (Figure F03), for both cells we are limited by the energy. (We need more cells to meet the energy requirement as opposed to the peak power requirement).</p>
+<section id="lg-m50">
+<h3>LG-M50<a class="headerlink" href="#lg-m50" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">params_lgm50</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_parameter_values</span> <span class="k">as</span> <span class="n">lg_param_values</span>
+
+<span class="n">power_cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_power</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_lg</span><span class="p">)</span>
+
+<span class="n">power_interpolant</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Interpolant</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_time</span><span class="p">),</span> <span class="n">power_cell</span><span class="p">,</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;operating mode&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">})</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">lg_param_values</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Power function [W]&quot;</span><span class="p">:</span> <span class="n">power_interpolant</span><span class="p">},</span> <span class="n">check_already_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_time</span><span class="p">),</span> <span class="n">t_interp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_time</span><span class="p">),</span> <span class="n">initial_soc</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">extended_time</span><span class="p">,</span> <span class="n">power_cell</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="o">*</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d1e8027e46d0f9f5a76944c8ef734fd48ddb8477086fb24bf1fa47ddf29cbe2c.png" src="../_images/d1e8027e46d0f9f5a76944c8ef734fd48ddb8477086fb24bf1fa47ddf29cbe2c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ticker</span>
+<span class="n">idx_max_current</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">x_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;separator&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">))</span>
+<span class="n">pos_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+<span class="n">neg_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">for</span> <span class="n">axis</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">))</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;x [$\mu$m]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Positive electrode potential [V]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/afed52a2a35c07f87f60b5683683cc99c71dbb6713fcdebb22289c9618c1844f.png" src="../_images/afed52a2a35c07f87f60b5683683cc99c71dbb6713fcdebb22289c9618c1844f.png" />
+</div>
+</div>
+</section>
+<section id="molicel-p45b">
+<h3>Molicel P45B<a class="headerlink" href="#molicel-p45b" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">params_p45b</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_parameter_values</span> <span class="k">as</span> <span class="n">p45b_param_values</span>
+
+<span class="n">power_cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_power</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_moli</span><span class="p">)</span>
+
+<span class="n">power_interpolant</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Interpolant</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_time</span><span class="p">),</span> <span class="n">power_cell</span><span class="p">,</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;operating mode&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">})</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">p45b_param_values</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Power function [W]&quot;</span><span class="p">:</span> <span class="n">power_interpolant</span><span class="p">},</span> <span class="n">check_already_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_time</span><span class="p">),</span> <span class="n">t_interp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">extended_time</span><span class="p">),</span> <span class="n">initial_soc</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">extended_time</span><span class="p">,</span> <span class="n">power_cell</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="o">*</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/72061516ad8c1f6603145d4188808bae43b1557652705d028c774856228c2a11.png" src="../_images/72061516ad8c1f6603145d4188808bae43b1557652705d028c774856228c2a11.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx_max_current</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">x_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;separator&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">))</span>
+<span class="n">pos_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+<span class="n">neg_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">for</span> <span class="n">axis</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">))</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;x [$\mu$m]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Positive electrode potential [V]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/c126add06c4ae17e78e14d0c81137ee1547a03966774a35286578922b571306a.png" src="../_images/c126add06c4ae17e78e14d0c81137ee1547a03966774a35286578922b571306a.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="skydio-x10">
+<h2>Skydio X10<a class="headerlink" href="#skydio-x10" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">power_req</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">350</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">270</span><span class="p">,</span> <span class="mi">270</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">])</span>
+<span class="n">time</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>   <span class="mf">0.</span>  <span class="p">,</span>   <span class="mf">30.</span>  <span class="p">,</span>   <span class="mf">30.01</span><span class="p">,</span> <span class="mf">1530.</span>  <span class="p">,</span> <span class="mf">1530.01</span><span class="p">,</span> <span class="mf">1560.</span>  <span class="p">,</span> <span class="mf">1560.01</span><span class="p">,</span> <span class="mf">1565.</span>  <span class="p">,</span> <span class="mf">1565.01</span><span class="p">,</span> <span class="mf">1595.</span><span class="p">,</span> <span class="mf">1595.01</span><span class="p">,</span> <span class="mi">1600</span><span class="p">,</span> <span class="mf">1600.01</span><span class="p">,</span> <span class="mi">1630</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_req</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Power [W]&quot;</span><span class="p">)</span>
+
+<span class="n">energy_J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">power_req</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+<span class="n">energy_kWh</span> <span class="o">=</span> <span class="n">energy_J</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5336969b4f25476ecf17e05d9c5cbb17a0509af19f81f461926ad61421ff1991.png" src="../_images/5336969b4f25476ecf17e05d9c5cbb17a0509af19f81f461926ad61421ff1991.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molicel_power_capacity</span> <span class="o">=</span> <span class="mf">16.2</span> <span class="c1">#spec sheet Wh</span>
+<span class="n">molicel_peak_power</span> <span class="o">=</span> <span class="mi">150</span> <span class="c1"># 180 - 90% SOC - 10s</span>
+
+<span class="n">LG_power_capacity</span> <span class="o">=</span> <span class="mf">18.2</span> <span class="c1">#spec sheet - Wh</span>
+<span class="n">LG_peak_power</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># pulse - 80 W - 10s - low SOC</span>
+
+<span class="n">n_cells_moli</span> <span class="o">=</span> <span class="n">energy_kWh</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">molicel_power_capacity</span>
+<span class="n">n_cells_power_moli</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span><span class="o">/</span> <span class="n">molicel_peak_power</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Molicel P45B </span><span class="se">\n</span><span class="s2"> Energy limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_moli</span><span class="p">)</span><span class="si">}</span><span class="s2">, Power limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_moli</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">n_cells_lg</span> <span class="o">=</span> <span class="n">energy_kWh</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">LG_power_capacity</span>
+<span class="n">n_cells_power_lg</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span><span class="o">/</span><span class="n">LG_peak_power</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LG-M50 </span><span class="se">\n</span><span class="s2"> Energy limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_lg</span><span class="p">)</span><span class="si">}</span><span class="s2">, Power limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_lg</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molicel P45B 
+ Energy limited case: 8.0, Power limited case: 5.0
+LG-M50 
+ Energy limited case: 7.0, Power limited case: 14.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the LGM50 cell we are clearly power limited. For the Molicel we are energy limited, however the number of cells from the energy and peak power calculations are close.</p>
+<section id="id1">
+<h3>LG-M50<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">params_lgm50</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_parameter_values</span> <span class="k">as</span> <span class="n">lg_param_values</span>
+
+<span class="n">power_cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_lg</span><span class="p">)</span>
+
+<span class="n">power_interpolant</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Interpolant</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">power_cell</span><span class="p">,</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;operating mode&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">})</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">lg_param_values</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Power function [W]&quot;</span><span class="p">:</span> <span class="n">power_interpolant</span><span class="p">},</span> <span class="n">check_already_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">t_interp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">initial_soc</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_cell</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="o">*</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3844e5ec7732df5cb109bd32e3d2b38894d45c9b2589eda81543301376d14eeb.png" src="../_images/3844e5ec7732df5cb109bd32e3d2b38894d45c9b2589eda81543301376d14eeb.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ticker</span>
+<span class="n">idx_max_current</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">x_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;separator&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">))</span>
+<span class="n">pos_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+<span class="n">neg_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">for</span> <span class="n">axis</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">))</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;x [$\mu$m]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Positive electrode potential [V]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/a5c84773bed648bcac38dd6361c3bb75f91fa7c347de8b81e9b66498fbaeaa01.png" src="../_images/a5c84773bed648bcac38dd6361c3bb75f91fa7c347de8b81e9b66498fbaeaa01.png" />
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Molicel P45B<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">params_p45b</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_parameter_values</span> <span class="k">as</span> <span class="n">p45b_param_values</span>
+
+<span class="n">power_cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_moli</span><span class="p">)</span>
+
+<span class="n">power_interpolant</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Interpolant</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">power_cell</span><span class="p">,</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;operating mode&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">})</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">p45b_param_values</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Power function [W]&quot;</span><span class="p">:</span> <span class="n">power_interpolant</span><span class="p">},</span> <span class="n">check_already_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">t_interp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">initial_soc</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_cell</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="o">*</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/dda57d3d5c8067b1881debbabed47c32d9f3d12dbb69e130cb2bab5fa9ee842e.png" src="../_images/dda57d3d5c8067b1881debbabed47c32d9f3d12dbb69e130cb2bab5fa9ee842e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ticker</span>
+<span class="n">idx_max_current</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">x_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;separator&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">))</span>
+<span class="n">pos_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+<span class="n">neg_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">for</span> <span class="n">axis</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">))</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;x [$\mu$m]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Positive electrode potential [V]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/aaaea09fddf520512fb66b99762717dccea812bc08bae225a4cef2ec987f11ae.png" src="../_images/aaaea09fddf520512fb66b99762717dccea812bc08bae225a4cef2ec987f11ae.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="pyka-pelican">
+<h2>Pyka - Pelican<a class="headerlink" href="#pyka-pelican" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">power_req</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">70000</span><span class="p">,</span> <span class="mi">70000</span><span class="p">,</span> <span class="mi">23200</span><span class="p">,</span> <span class="mi">23200</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">])</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mf">90.1</span><span class="p">,</span> <span class="mi">30</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="mi">90</span><span class="p">,</span> <span class="mf">1890.01</span><span class="p">,</span> <span class="mf">1890.01</span><span class="o">+</span><span class="mi">180</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_req</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Power [W]&quot;</span><span class="p">)</span>
+
+<span class="n">energy_J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">power_req</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+<span class="n">energy_kWh</span> <span class="o">=</span> <span class="n">energy_J</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/07d315fde72341c48b1b6eb89c9fee58ab4e0ccc5c8d0fc4d2346695b3076bc4.png" src="../_images/07d315fde72341c48b1b6eb89c9fee58ab4e0ccc5c8d0fc4d2346695b3076bc4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molicel_power_capacity</span> <span class="o">=</span> <span class="mf">16.2</span> <span class="c1">#spec sheet Wh</span>
+<span class="n">molicel_peak_power</span> <span class="o">=</span> <span class="mi">150</span> <span class="c1"># 180 - 90% SOC - 10s, continuous at high SOC</span>
+
+<span class="n">LG_power_capacity</span> <span class="o">=</span> <span class="mf">18.2</span> <span class="c1">#spec sheet - Wh</span>
+<span class="n">LG_peak_power</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># pulse - 80 W - 10s - we want continuous power at high SOC</span>
+
+<span class="n">n_cells_moli</span> <span class="o">=</span> <span class="n">energy_kWh</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">molicel_power_capacity</span>
+<span class="n">n_cells_power_moli</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span><span class="o">/</span> <span class="n">molicel_peak_power</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Molicel P45B </span><span class="se">\n</span><span class="s2"> Energy limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_moli</span><span class="p">)</span><span class="si">}</span><span class="s2">, Power limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_moli</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">n_cells_lg</span> <span class="o">=</span> <span class="n">energy_kWh</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">LG_power_capacity</span>
+<span class="n">n_cells_power_lg</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span><span class="o">/</span><span class="n">LG_peak_power</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LG-M50 </span><span class="se">\n</span><span class="s2"> Energy limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_lg</span><span class="p">)</span><span class="si">}</span><span class="s2">, Power limited case: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_lg</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molicel P45B 
+ Energy limited case: 855.0, Power limited case: 467.0
+LG-M50 
+ Energy limited case: 762.0, Power limited case: 1400.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the case of the aircraft, similar to the Skydio drone we are clearly power limited in the case of the LGM50 and energy limited in the case of the Molicel.</p>
+<section id="id3">
+<h3>LG-M50<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">params_lgm50</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_parameter_values</span> <span class="k">as</span> <span class="n">lg_param_values</span>
+
+<span class="n">power_cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_power_lg</span><span class="p">)</span>
+
+<span class="n">power_interpolant</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Interpolant</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">power_cell</span><span class="p">,</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;operating mode&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">})</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">lg_param_values</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Power function [W]&quot;</span><span class="p">:</span> <span class="n">power_interpolant</span><span class="p">},</span> <span class="n">check_already_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">t_interp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">initial_soc</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_cell</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="o">*</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/094263942cf027977d23f65208781e315d12acc5153abd38999ced4a7102b12f.png" src="../_images/094263942cf027977d23f65208781e315d12acc5153abd38999ced4a7102b12f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ticker</span>
+<span class="n">idx_max_current</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">x_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;separator&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">))</span>
+<span class="n">pos_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+<span class="n">neg_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">for</span> <span class="n">axis</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">))</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;x [$\mu$m]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Positive electrode potential [V]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/7fdaba4e466219b992e0f960bb3296fc0e0eee0b36f61a4a5510043562e6c17d.png" src="../_images/7fdaba4e466219b992e0f960bb3296fc0e0eee0b36f61a4a5510043562e6c17d.png" />
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>Molicel P45B<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">params_p45b</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_parameter_values</span> <span class="k">as</span> <span class="n">p45b_param_values</span>
+
+<span class="n">power_cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">power_req</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">n_cells_moli</span><span class="p">)</span>
+
+<span class="n">power_interpolant</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Interpolant</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">power_cell</span><span class="p">,</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">lithium_ion</span><span class="o">.</span><span class="n">DFN</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;operating mode&quot;</span><span class="p">:</span> <span class="s2">&quot;power&quot;</span><span class="p">})</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">p45b_param_values</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Power function [W]&quot;</span><span class="p">:</span> <span class="n">power_interpolant</span><span class="p">},</span> <span class="n">check_already_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">IDAKLUSolver</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">pybamm</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">parameter_values</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+<span class="n">soln</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">t_eval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">t_interp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">initial_soc</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_cell</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="o">*</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Voltage [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PyBaMM&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Voltage&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1378ac6595a82628d2784184a6373c89a7763a7d166c419e2e858fe02da13633.png" src="../_images/1378ac6595a82628d2784184a6373c89a7763a7d166c419e2e858fe02da13633.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ticker</span>
+<span class="n">idx_max_current</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Current [A]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+
+<span class="n">x_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;separator&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">))</span>
+<span class="n">pos_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;positive electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+<span class="n">neg_mesh</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">mesh</span><span class="p">[</span><span class="s2">&quot;negative electrode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">for</span> <span class="n">axis</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">))</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;x [$\mu$m]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative particle surface concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte concentration [mol.m-3]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Electrolyte potential [V]&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neg_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Negative electrode potential [V]&quot;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos_mesh</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="n">soln</span><span class="p">[</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[:,</span> <span class="n">idx_max_current</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Positive electrode potential [V]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Positive electrode potential [V]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/66f6c319a13aa4032558c746a898abe83326445a9fcfa4a6be78d2006de80d03.png" src="../_images/66f6c319a13aa4032558c746a898abe83326445a9fcfa4a6be78d2006de80d03.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./hw"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../exams/midterm_soln.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Midterm Solutions</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project Solutions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-7-8">Question 6, 7, 8</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-f03">Figure F03</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lg-m50">LG-M50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molicel-p45b">Molicel P45B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skydio-x10">Skydio X10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">LG-M50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Molicel P45B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyka-pelican">Pyka - Pelican</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">LG-M50</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Molicel P45B</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amal Sebastian
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
